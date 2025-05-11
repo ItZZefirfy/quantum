@@ -43,6 +43,12 @@
 
     .level-secondary-text {
         color: var(--secondary-text-color);
+        font-weight: normal;
+    }
+
+    .level-name-secondary-text {
+        color: var(--other-text-color);
+        font-weight: normal;
     }
     
     @media (min-width: 960px) {

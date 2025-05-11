@@ -11,11 +11,13 @@
   --transparent-frame-color2: #0005;
   --main-text-color: white;
   --secondary-text-color: #777;
+  --other-text-color: #bbb;
   --light-frame-color: #fff;
   --light-transparent-frame-color: #fffa;
   --light-transparent-frame-color2: #fff5;
   --light-main-text-color: black;
   --light-secondary-text-color: #555;
+  --light-other-text-color: #333;
   /*
   // colors (dark)
   --frame-color: #001;
@@ -547,6 +549,11 @@ main {
 }
 .level .level-secondary-text {
   color: var(--secondary-text-color);
+  font-weight: normal;
+}
+.level .level-name-secondary-text {
+  color: var(--other-text-color);
+  font-weight: normal;
 }
 @media (min-width: 960px) {
   .level .level-element {

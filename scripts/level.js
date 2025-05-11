@@ -1,11 +1,11 @@
-function drawLevel(levelName, author, previewLink, videoLink) {
+function drawLevel(levelName, author, previewLink, videoLink, position) {
     let levelsWrapper = document.getElementById("levels-wrapper")
 
     let level = `<div class="level">
                     <img src="${previewLink}" alt="level preview" class="level-element" 
                         onclick="window.open('${videoLink}', '_blank')">
                     <div class="level-text-wrapper level-element">
-                        <h1 class="level-main-text">${levelName}</h1>
+                        <h1 class="level-main-text"><span class="level-name-secondary-text"> #${position} </span>${levelName}</h1>
                         <h3 class="level-secondary-text">by ${author}</h3>
                     </div>
                 </div>`
@@ -52,7 +52,8 @@ function generateLevels(type) {
             levels[i].name,
             levels[i].creator,
             preview,
-            levels[i].videoLink
+            levels[i].videoLink,
+            i + 1
         )
     }
 }
