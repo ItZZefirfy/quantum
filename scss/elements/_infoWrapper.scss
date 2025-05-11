@@ -1,0 +1,116 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-wrapper {
+    width: 80vw;
+    padding: var(--pxl2);
+    border: 1px solid var(--main-text-color);
+    border-radius: var(--pxl2);
+    font-size: 1.5rem;
+
+    background-color: var(--transparent-frame-color);
+    backdrop-filter: blur(var(--pxl-1));
+    
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        border: 1px solid var(--main-text-color);
+        border-radius: var(--pxl2);
+        filter: blur(8px);
+        pointer-events: none;
+
+
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .info-fast-links {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+
+        a {
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid var(--main-text-color);
+
+            user-select: none;
+
+            margin: var(--pxl-1);
+            padding: var(--pxl-1);
+            border-radius: var(--pxl1);
+
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--secondary-text-color);
+                    border: 1px solid var(--secondary-text-color);
+                }
+            }
+        }
+    }
+}
+
+.send-button {
+    outline: none;
+    border: none;
+
+    user-select: none;
+
+    font-size: 1.5rem;
+
+    background-color: var(--frame-color);
+    * {
+        transition: var(--transition);
+        color: var(--main-text-color);
+        margin: 0 var(--pxl-1);
+    }
+
+    padding: var(--pxl2);
+    border-radius: var(--pxl2);
+
+    transition: var(--transition);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        border: 1px solid var(--main-text-color);
+        border-radius: var(--pxl2);
+        filter: blur(12px);
+        pointer-events: none;
+
+
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--light-frame-color);
+            * {
+                color: var(--light-main-text-color);
+            }
+        }
+    }
+}

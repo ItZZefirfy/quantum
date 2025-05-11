@@ -1,0 +1,116 @@
+.social-media-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media {
+    --background-color: black;
+    --font-color: white;
+    --tooltip-text: 'something';
+
+    text-decoration: none;
+
+    background: var(--background-color);
+    color: var(--font-color);
+
+    font-size: calc(var(--pxl3) * 2);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    width: calc(var(--pxl3) * 3);
+    height: calc(var(--pxl3) * 3);
+    border-radius: calc(var(--pxl3) * 1.5);
+
+    margin: var(--pxl2);
+
+    position: relative;
+    z-index: 0;
+
+    user-select: none;
+
+    transition: var(--transition);
+
+    &::after {
+        content: var(--tooltip-text);
+        position: absolute;
+        z-index: 1;
+        font-size: var(--pxl3);
+
+        height: var(--pxl3);
+        padding: var(--pxl1);
+
+        border-radius: calc(var(--pxl3) * 2);
+
+        background: var(--background-color);
+        color: var(--font-color);
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        transition: var(--transition);
+        pointer-events: none;
+        user-select: none;
+
+        transform: scale(50%);
+        opacity: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+        background: var(--background-color);
+
+        width: 100%;
+        height: 100%;
+        border-radius: calc(var(--pxl3) * 2);
+        transition: var(--transition);
+
+        opacity: 0;
+        filter: none;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+    
+            &::before {
+                filter: blur(var(--pxl-1));
+                opacity: 1;
+            }
+    
+            &::after {
+                transform: scale(75%) translateY(200%);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.social-media-discord {
+    --background-color: #738adb;
+    --font-color: white;
+    --tooltip-text: 'discord';
+}
+
+.social-media-telegram {
+    --background-color: linear-gradient(to bottom, #2aabee,#229ED9);
+    --font-color: white;
+    --tooltip-text: 'telegram';
+}
+
+.social-media-youtube {
+    --background-color: #ff1a47;
+    --font-color: white;
+    --tooltip-text: 'youtube';
+}

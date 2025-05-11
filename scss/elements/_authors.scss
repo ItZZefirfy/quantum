@@ -1,0 +1,129 @@
+.user-cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    background-color: var(--transparent-frame-color);
+    padding: var(--pxl2);
+    border-radius: var(--pxl2);
+    backdrop-filter: blur(var(--pxl-1));
+
+    transition: var(--transition);
+
+    margin: var(--pxl3);
+
+    min: {
+        width: 250px;
+        height: 320px;
+    }
+
+    &:hover {
+        transform: scale(105%);
+    }
+
+    img {
+        height: 75px;
+        user-select: none;
+    }
+
+    .user-image-wrapper {
+        width: 75px;
+        height: 75px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: calc(75px / 2);
+        
+        margin-bottom: var(--pxl1);
+    }
+
+    h1 {
+        margin-bottom: var(--pxl2);
+    }
+}
+
+// roles
+.user-roles-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-role {
+    --background: blue;
+    --color: white;
+
+    user-select: none;
+
+    background: var(--background);
+    color: var(--color);
+    padding: var(--pxl-1) var(--pxl2);
+    margin: var(--pxl-1);
+
+    border-radius: 1rem;
+
+    text-align: center;
+
+    position: relative;
+
+    transition: var(--transition);
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        transition: var(--transition2);
+
+        background: var(--background);
+        border-radius: 1rem;
+
+        opacity: 0;
+
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            &::before {
+                opacity: 1;
+                filter: blur(var(--pxl1));
+    
+                transition: var(--transition);
+            }
+        } 
+    }
+}
+
+.role-coder {
+    --background: linear-gradient(30deg, #c7f977, #6c5fe6);
+}
+
+.role-site-moderator {
+    --background: linear-gradient(120deg, #7a61e8, #aa4edf);
+}
+
+.role-moderator {
+    --background: linear-gradient(120deg, #974de6, #df6b4e);
+}
+
+.role-administrator {
+    --background: linear-gradient(120deg, #e89e61, #df4ed3, #d93a3a);
+}

@@ -1,0 +1,69 @@
+{
+    "players": [
+        {
+            "displayName": "Zefurka",
+            "name":"Zefirfy",
+            "icon": false
+        }
+    ],
+
+    "demonlist": [
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        },
+
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }, 
+
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }, 
+
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }
+    ],
+    
+    "challengelist": [
+
+    ],
+
+    "platformerlist": [
+
+    ],
+
+    "progresses": [
+        {
+            "id": 123,
+            "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "player": "Zefirfy",
+            "previewFormat": false,
+            "customPreview": false
+        }
+    ]
+}

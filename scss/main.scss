@@ -1,0 +1,133 @@
+@import 'settings';
+
+
+body {
+    background-image: url("../images/backgrounds/background-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header, main, footer {
+    padding: var(--pxl2);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#header-wrapper {
+    user-select: none;
+
+    padding: var(--pxl2);
+
+    font-size: 0.8rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    @media (min-width: 761px) {
+        button {
+            display: none;
+        }
+    }
+
+    @media (max-width: 760px) {
+        justify-content: start;
+        background-color: var(--transparent-frame-color2);
+        backdrop-filter: blur(var(--pxl-1));
+        width: 80vw;
+
+        border-radius: var(--pxl2);
+
+        a {
+            display: none;
+        }
+    }
+
+    * {
+        margin: 0 var(--pxl-1);
+        padding: var(--pxl-1);
+        transition: var(--transition);
+    }
+
+    a {
+        text-decoration: none;
+        border-radius: var(--pxl2);
+
+        @media (hover: hover) {
+            &:hover {
+                text-shadow: 0 0 var(--pxl2) var(--secondary-text-color);
+                color: var(--secondary-text-color);
+            }
+        }
+    }
+
+    a:not(.main-header) {
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--light-transparent-frame-color2);
+                backdrop-filter: blur(var(--pxl-1));
+            }
+        }
+    }
+
+    #open-menu-button {
+        outline: none;
+        border: none;
+        border-radius: var(--pxl2);
+        background: transparent;
+
+        @media (hover: hover) {
+            &:hover {
+                background: var(--light-transparent-frame-color2);
+                backdrop-filter: blur(var(--pxl-1));
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .footer-layer {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .footer-item, >a {
+            margin: var(--pxl1);
+        }
+
+        a {
+            transition: var(--transition);
+            padding: var(--pxl-1);
+            border-radius: var(--pxl-1);
+        }
+
+        @media (hover: hover) {
+            a:hover {
+                color: var(--light-main-text-color);
+                background-color: var(--light-frame-color);
+            }
+        }
+    }
+}
+
+@import 'elements/authors';
+@import 'elements/menu';
+@import 'elements/socialMedia';
+@import 'elements/infoWrapper';
+@import 'elements/level';

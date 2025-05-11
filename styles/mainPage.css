@@ -1,0 +1,279 @@
+#black-background {
+  -webkit-backdrop-filter: brightness(5%) blur(2px);
+          backdrop-filter: brightness(5%) blur(2px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  transition: var(--transition);
+}
+
+.about-wrapper {
+  font-size: 2rem;
+  color: white;
+  background-color: var(--transparent-frame-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pxl2);
+  margin: var(--pxl2);
+  border-radius: var(--pxl3);
+  -webkit-backdrop-filter: blur(var(--pxl-1));
+          backdrop-filter: blur(var(--pxl-1));
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--main-text-color);
+}
+@media (max-width: 600px) {
+  .about-wrapper {
+    width: 80vw;
+  }
+}
+
+.about--quantum-dust-wrapper {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;*/
+}
+@media (max-width: 600px) {
+  .about--quantum-dust-wrapper {
+    display: none;
+  }
+}
+
+.quantum-dust {
+  --dust-color: green;
+  --dust-size: 7px;
+  --dust-effect-scale: 0.5;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - var(--dust-size));
+  left: calc(50% - var(--dust-size));
+  background-color: var(--dust-color);
+  padding: var(--dust-size);
+  border-radius: var(--dust-size);
+  box-shadow: 0 0 calc(3 * var(--dust-size)) var(--dust-color);
+  mix-blend-mode: screen;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.about--quantum-dust-wrapper #quantum-dust-1 {
+  animation-name: quantum-dust-1-animation;
+  animation-duration: 2.59s;
+}
+.about--quantum-dust-wrapper #quantum-dust-2 {
+  animation-name: quantum-dust-2-animation;
+  animation-duration: 2.471s;
+}
+.about--quantum-dust-wrapper #quantum-dust-3 {
+  animation-name: quantum-dust-3-animation;
+  animation-duration: 3.051s;
+}
+.about--quantum-dust-wrapper #quantum-dust-4 {
+  animation-name: quantum-dust-4-animation;
+  animation-duration: 2.353s;
+}
+.about--quantum-dust-wrapper #quantum-dust-5 {
+  animation-name: quantum-dust-5-animation;
+  animation-duration: 1.062s;
+}
+.about--quantum-dust-wrapper #quantum-dust-6 {
+  animation-name: quantum-dust-6-animation;
+  animation-duration: 2.289s;
+}
+.about--quantum-dust-wrapper #quantum-dust-7 {
+  animation-name: quantum-dust-7-animation;
+  animation-duration: 2.875s;
+}
+.about--quantum-dust-wrapper #quantum-dust-8 {
+  animation-name: quantum-dust-8-animation;
+  animation-duration: 1.574s;
+}
+.about--quantum-dust-wrapper #quantum-dust-9 {
+  animation-name: quantum-dust-9-animation;
+  animation-duration: 2.405s;
+}
+.about--quantum-dust-wrapper #quantum-dust-10 {
+  animation-name: quantum-dust-10-animation;
+  animation-duration: 3.071s;
+}
+
+@keyframes quantum-dust-1-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(-145% * var(--dust-effect-scale))) translateY(calc(-10% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(145% * var(--dust-effect-scale))) translateY(calc(10% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-2-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(108% * var(--dust-effect-scale))) translateY(calc(-211% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(-108% * var(--dust-effect-scale))) translateY(calc(211% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-3-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(276% * var(--dust-effect-scale))) translateY(calc(-217% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(-276% * var(--dust-effect-scale))) translateY(calc(217% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-4-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(-346% * var(--dust-effect-scale))) translateY(calc(-65% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(346% * var(--dust-effect-scale))) translateY(calc(65% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-5-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(91% * var(--dust-effect-scale))) translateY(calc(137% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(-91% * var(--dust-effect-scale))) translateY(calc(-137% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-6-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(-450% * var(--dust-effect-scale))) translateY(calc(-19% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(450% * var(--dust-effect-scale))) translateY(calc(19% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-7-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(-143% * var(--dust-effect-scale))) translateY(calc(-428% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(143% * var(--dust-effect-scale))) translateY(calc(428% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-8-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(-308% * var(--dust-effect-scale))) translateY(calc(-32% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(308% * var(--dust-effect-scale))) translateY(calc(32% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-9-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(-351% * var(--dust-effect-scale))) translateY(calc(252% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(351% * var(--dust-effect-scale))) translateY(calc(-252% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes quantum-dust-10-animation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(calc(-270% * var(--dust-effect-scale))) translateY(calc(-75% * var(--dust-effect-scale)));
+  }
+  66% {
+    transform: translateX(calc(270% * var(--dust-effect-scale))) translateY(calc(75% * var(--dust-effect-scale)));
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+.bg-effect-particle {
+  --color: red;
+  --scale: 30px;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  filter: blur(calc(var(--scale) * 2));
+  background-color: var(--color);
+  padding: var(--scale);
+  border-radius: var(--scale);
+  mix-blend-mode: screen;
+}
+
+#particle-1 {
+  --color: #4d72ca;
+  --scale: 60px;
+  transform: translateX(-100%) translateY(50%);
+}
+
+#particle-2 {
+  --color: #ab3ede;
+  --scale: 40px;
+  transform: translateX(30%) translateY(50%);
+}
+
+#particle-3 {
+  --color: #90f189;
+  --scale: 50px;
+  transform: translateX(150%) translateY(50%);
+}

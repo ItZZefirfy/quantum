@@ -1,0 +1,162 @@
+@use 'other/functions.scss';
+
+#black-background {
+    //background-color: var(--frame-color);
+    backdrop-filter: brightness(5%) blur(2px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: -10;
+
+    transition: var(--transition);
+}
+
+.about-wrapper {
+    font-size: 2rem;
+    color: white;
+
+    background-color: var(--transparent-frame-color);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--pxl2);
+    margin: var(--pxl2);
+
+    border-radius: var(--pxl3);
+
+    backdrop-filter: blur(var(--pxl-1));
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid var(--main-text-color);
+
+    @media (max-width: 600px) {
+        width: 80vw;
+    }
+
+    // background-color: blue;
+}
+
+.about--quantum-dust-wrapper {
+    position: relative;
+
+    width: 200px;
+    height: 100px;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;*/
+}
+
+.about--text-wrapper {
+}
+
+.quantum-dust {
+    --dust-color: green;
+    --dust-size: 7px;
+    --dust-effect-scale: 0.5;
+
+    content: '';
+    position: absolute;
+    z-index: 1;
+
+    top: calc(50% - var(--dust-size));
+    left: calc(50% - var(--dust-size));
+
+    background-color: var(--dust-color);
+    padding: var(--dust-size);
+    border-radius: var(--dust-size);
+
+    box-shadow: 0 0 calc(3 * var(--dust-size)) var(--dust-color);
+
+    mix-blend-mode: screen;
+
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+$dust-count: 10; 
+
+.about--quantum-dust-wrapper {
+    @for $i from 1 through $dust-count {
+        $duration: functions.random_range(1000, 4000) * .001;
+        // &:nth-child(#{$i}) {
+        #quantum-dust-#{$i} {
+            animation-name: quantum-dust-#{$i}-animation;
+            animation-duration: #{$duration}s;
+        }
+    }
+}
+
+@for $i from 1 through $dust-count {
+    $scale: 500;
+    $x-position: functions.random_range($scale * -1, $scale);
+    $y-position: functions.random_range($scale * -1, $scale);
+    @keyframes quantum-dust-#{$i}-animation {
+        0% {
+            transform: translateX(0) translateY(0);
+        }
+    
+        33% {
+            transform: translateX(calc(#{$x-position * 1%} * var(--dust-effect-scale))) 
+                       translateY(calc(#{$y-position * 1%} * var(--dust-effect-scale)));
+        }
+    
+        66% {
+            transform: translateX(calc(#{$x-position * -1%} * var(--dust-effect-scale))) 
+                       translateY(calc(#{$y-position * -1%} * var(--dust-effect-scale)));
+        }
+    
+        100% {
+            transform: translateX(0) translateY(0);
+        }
+    }
+}
+
+
+.bg-effect-particle {
+    --color: red;
+    --scale: 30px;
+
+    content: '';
+    position: absolute;
+    z-index: 1;
+
+    filter: blur(calc(var(--scale) * 2));
+
+    background-color: var(--color);
+    padding: var(--scale);
+    border-radius: var(--scale);
+
+    mix-blend-mode: screen;
+}
+
+#particle-1 {
+    --color: #4d72ca;
+    --scale: 60px;
+    transform: translateX(-100%) translateY(50%);
+}
+
+#particle-2 {
+    --color: #ab3ede;
+    --scale: 40px;
+    transform: translateX(30%) translateY(50%);
+}
+
+#particle-3 {
+    --color: #90f189;
+    --scale: 50px;
+    transform: translateX(150%) translateY(50%);
+}

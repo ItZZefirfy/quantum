@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+:root {
+    // font-families
+    --font-family: "Wix Madefor Text", sans-serif;
+
+    // pixels
+    --pxl-1: 6px;
+    --pxl1: 12px;
+    --pxl2: 16px;
+    --pxl3: 24px;
+
+    // colors (dark)
+    --frame-color: #000;
+    --transparent-frame-color: #000a;
+    --transparent-frame-color2: #0005;
+    --main-text-color: white;
+    --secondary-text-color: #777;
+
+    // colors (light)
+    --light-frame-color: #fff;
+    --light-transparent-frame-color: #fffa;
+    --light-transparent-frame-color2: #fff5;
+    --light-main-text-color: black;
+    --light-secondary-text-color: #555;
+
+    /*
+    // colors (dark)
+    --frame-color: #001;
+    --transparent-frame-color: #001a;
+    --transparent-frame-color2: #0015;
+    --main-text-color: white;
+    --secondary-text-color: #778;
+
+    // colors (light)
+    --light-frame-color: #eef;
+    --light-transparent-frame-color: #eefa;
+    --light-transparent-frame-color2: #eef5;
+    --light-main-text-color: black;
+    --light-secondary-text-color: #445;
+    */
+
+    // transitions
+    --transition: .2s ease-out;
+    --transition2: 6s ease-out;
+}
+
+*, button {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);  
+    color: var(--main-text-color); 
+}
+
+::selection {
+    background-color: var(--light-frame-color);
+    color: var(--light-main-text-color);
+}
