@@ -327,11 +327,12 @@ footer .footer-layer a {
 }
 
 .social-media-wrapper {
-  display: flex;
+  /*display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
+  display: none;
 }
 
 .social-media {
