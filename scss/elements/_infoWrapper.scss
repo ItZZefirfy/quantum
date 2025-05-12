@@ -51,8 +51,18 @@ main {
             padding: var(--pxl-1);
             border-radius: var(--pxl1);
 
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
             @media (hover: hover) {
                 &:hover {
+                    * {
+                        color: var(--secondary-text-color) !important;
+                        transition: var(--transition);
+                    }
                     color: var(--secondary-text-color);
                     border: 1px solid var(--secondary-text-color);
                 }
