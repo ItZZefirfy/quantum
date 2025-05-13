@@ -3,8 +3,8 @@ function addHeader() {
     let headerText =   `<div id="header-wrapper">    
                             <a href="index.html" class="main-header"><h1>Главная</h1></a>
                             <a href="demonlist.html"><h1>демоны</h1></a>
-                            <a href=""><h1>челленджи</h1></a>
-                            <a href=""><h1>платформеры</h1></a>
+                            <a href="challengelist.html"><h1>челленджи</h1></a>
+                            <a href="platformerlist.html"><h1>платформеры</h1></a>
                             <button id="open-menu-button"><h1><i class='bx bx-menu'></i>Меню</h1></button>
                         </div>`
     

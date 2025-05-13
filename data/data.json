@@ -50,11 +50,87 @@
     ],
     
     "challengelist": [
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        },
 
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }, 
+
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }, 
+
+        {
+            "name": "i need gays",
+            "verifier": "nigger",
+            "creator": "nigger",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }
     ],
 
     "platformerlist": [
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        },
 
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }, 
+
+        {
+            "name": "Tartarus",
+            "verifier": "Zefirfy",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }, 
+
+        {
+            "name": "vsc",
+            "verifier": "venom",
+            "creator": "Artembird",
+            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "id": 123,
+            "previewFormat": false,
+            "customPreview": false
+        }
     ],
 
     "progresses": [

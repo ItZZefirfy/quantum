@@ -3,7 +3,7 @@ function addFooter() {
     let footerText =   `<div class="footer-layer">
                             <a class="footer-layer" target="_blank" href="https://discord.gg/vX87VFVphg" style="user-select: none;">discord</a>
                             <a class="footer-layer" target="_blank" href="" style="user-select: none;">Github</a>
-                            <a class="footer-layer" target="_blank" href="authors.html" style="user-select: none;">Авторы</a>
+                            <a class="footer-layer" href="authors.html" style="user-select: none;">Авторы</a>
                         </div>
                         <div class="footer-layer">
                             <version class="footer-item">version 3.0.0.0</version>

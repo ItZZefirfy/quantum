@@ -1,0 +1,1 @@
+generateLevels("platformers")
