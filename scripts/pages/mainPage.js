@@ -9,3 +9,8 @@ window.onscroll = () => {
         document.getElementById("black-background").style.opacity = 1
     }
 }
+
+/*
+                    <a href=""><i class='bx bx-list-ol'></i>Impossible Level List</a>
+                    <a href=""><i class='bx bx-list-ol'></i>Impossible Challenge List</a>
+*/

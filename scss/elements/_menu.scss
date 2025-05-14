@@ -18,6 +18,26 @@
     padding: var(--pxl2);
 
     transform: translateX(-100vw);
+
+    .menu-link-wrapper {
+        margin-top: var(--pxl-1);
+        
+        a {
+            text-decoration: underline;
+            text-indent: 10px;
+            text-underline-offset: 5px;
+    
+            @media (hover: hover) {
+                * {
+                    transition: var(--transition);  
+                }
+    
+                &:hover * {
+                    color: var(--other-text-color);
+                }
+            }
+        }
+    }
 }
 
 #close-menu-button {

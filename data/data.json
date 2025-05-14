@@ -4,6 +4,12 @@
             "displayName": "Zefurka",
             "name":"Zefirfy",
             "icon": false
+        },
+
+        {
+            "displayName": "Dogorix",
+            "name":"artembird",
+            "icon": false
         }
     ],
 
@@ -13,9 +19,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 1,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         },
 
         {
@@ -23,9 +29,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 2,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }, 
 
         {
@@ -33,9 +39,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 3,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }, 
 
         {
@@ -43,9 +49,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 4,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }
     ],
     
@@ -55,9 +61,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 5,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         },
 
         {
@@ -65,9 +71,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 6,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }, 
 
         {
@@ -75,9 +81,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 7,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }, 
 
         {
@@ -85,9 +91,9 @@
             "verifier": "nigger",
             "creator": "nigger",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 8,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }
     ],
 
@@ -97,9 +103,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 9,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         },
 
         {
@@ -107,9 +113,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 10,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }, 
 
         {
@@ -117,9 +123,9 @@
             "verifier": "Zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 11,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }, 
 
         {
@@ -127,15 +133,29 @@
             "verifier": "venom",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 123,
+            "id": 12,
             "previewFormat": false,
-            "customPreview": false
+            "customPreview": "data/previews/testing.png"
         }
     ],
 
     "progresses": [
         {
-            "id": 123,
+            "id": 1,
+            "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "player": "Zefirfy",
+            "previewFormat": false,
+            "customPreview": false
+        },
+        {
+            "id": 5,
+            "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
+            "player": "Zefirfy",
+            "previewFormat": false,
+            "customPreview": false
+        },
+        {
+            "id": 9,
             "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
             "player": "Zefirfy",
             "previewFormat": false,

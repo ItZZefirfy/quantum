@@ -15,8 +15,23 @@ function addMenu() {
     let menu = document.getElementById("menu")
     let menuContent = `
         <h1>GDPS</h1>
-        <a href="index.html" class="main-header"><h2>Главная</h2></a>
-        <a href="demonlist.html"><h2>Демоны</h2></a>
+
+        <div class="menu-link-wrapper">
+            <a href="index.html" class="main-header"><h2>Главная</h2></a>
+        </div>
+        <div class="menu-link-wrapper">
+            <a href="demonlist.html"><h2>Демоны</h2></a>
+        </div>
+        <div class="menu-link-wrapper">
+            <a href="challengelist.html"><h2>Челленджи</h2></a>
+        </div>
+        <div class="menu-link-wrapper">
+            <a href="platformerlist.html"><h2>Платформеры</h2></a>
+        </div>
+        <div class="menu-link-wrapper">
+            <a href="players.html"><h2>Игроки</h2></a>
+        </div>
+
         <button id="close-menu-button"><h3>Назад</h3></button>
     `
     

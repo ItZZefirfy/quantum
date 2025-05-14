@@ -1,0 +1,35 @@
+.player {
+    background-color: var(--frame-color);
+
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+
+    padding: var(--pxl2);
+    margin: var(--pxl2);
+
+    border-radius: var(--pxl2);
+
+    width: 80vw;
+
+    transition: var(--transition);
+
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0 0 var(--pxl1) var(--light-main-text-color);
+        }
+    }
+
+    img {
+        padding-right: var(--pxl1);
+    }
+
+    h1 > span {
+        color: var(--other-text-color);
+    }
+
+    h3 {
+        color: var(--secondary-text-color);
+    }
+}

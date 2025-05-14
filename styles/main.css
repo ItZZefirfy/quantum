@@ -297,6 +297,22 @@ footer .footer-layer a {
   padding: var(--pxl2);
   transform: translateX(-100vw);
 }
+#menu .menu-link-wrapper {
+  margin-top: var(--pxl-1);
+}
+#menu .menu-link-wrapper a {
+  text-decoration: underline;
+  text-indent: 10px;
+  text-underline-offset: 5px;
+}
+@media (hover: hover) {
+  #menu .menu-link-wrapper a * {
+    transition: var(--transition);
+  }
+  #menu .menu-link-wrapper a:hover * {
+    color: var(--other-text-color);
+  }
+}
 
 #close-menu-button {
   outline: none;
@@ -609,4 +625,31 @@ main {
     -webkit-backdrop-filter: blur(var(--pxl-1));
             backdrop-filter: blur(var(--pxl-1));
   }
+}
+
+.player {
+  background-color: var(--frame-color);
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  padding: var(--pxl2);
+  margin: var(--pxl2);
+  border-radius: var(--pxl2);
+  width: 80vw;
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .player:hover {
+    box-shadow: 0 0 var(--pxl1) var(--light-main-text-color);
+  }
+}
+.player img {
+  padding-right: var(--pxl1);
+}
+.player h1 > span {
+  color: var(--other-text-color);
+}
+.player h3 {
+  color: var(--secondary-text-color);
 }
