@@ -60,12 +60,13 @@ function addMenus() {
 
     const siteNavigationMenuContent = `
         <listMenuButton id="mini-menu-news-link">Новости</listMenuButton>
-        <listMenuButton id="mini-menu-rules-link">Правила</listMenuButton>
         <listMenuButton id="mini-menu-settings-link">Настройки</listMenuButton>
+        <listMenuBorder></listMenuBorder>
+        <listMenuButton id="mini-menu-rules-discord-link">Правила дискорд сервера</listMenuButton>
+        <listMenuButton id="mini-menu-rules-gdps-link">Правила приватного сервера</listMenuButton>
         <listMenuBorder></listMenuBorder>
         <listMenuButton id="mini-menu-send-progress">Отправить прохождение</listMenuButton>
     `
-
     
     body.innerHTML += menus    
     
@@ -77,6 +78,9 @@ function addMenus() {
     listsMenu.innerHTML += listsMenuContent
     siteNavigationMenu.innerHTML += siteNavigationMenuContent
 
+    window.isOpen_siteNavigationMenu = false
+    window.isOpen_listsMenu = false
+    
     function setDynamicUserFramePosition() {
         // navigation menu
         siteNavigationMenu.style.top = `${openSiteMenuButton.offsetHeight + 24}px`
@@ -91,10 +95,17 @@ function addMenus() {
 
     addEventListener("resize", () => {
         setDynamicUserFramePosition()
-    })
 
-    window.isOpen_siteNavigationMenu = false
-    window.isOpen_listsMenu = false
+        siteNavigationMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
+        siteNavigationMenu.style.opacity = 0
+        siteNavigationMenu.style.pointerEvents = 'none'
+        window.isOpen_siteNavigationMenu = false
+
+        listsMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
+        listsMenu.style.opacity = 0
+        listsMenu.style.pointerEvents = 'none'
+        window.isOpen_listsMenu = false
+    })
     
     window.addEventListener('scroll', (event) => {
         siteNavigationMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
@@ -151,17 +162,14 @@ function addMenus() {
         }
     })
 
-    function openLink(href) {
-        window.open(href, "_self")
-    }
-
     document.getElementById("mini-menu-players-link").onclick = () => { openLink("players.html") }
     document.getElementById("mini-menu-demonlist-link").onclick = () => { openLink("demonlist.html") }
     document.getElementById("mini-menu-challengelist-link").onclick = () => { openLink("challengelist.html") }
     document.getElementById("mini-menu-platformerlist-link").onclick = () => { openLink("platformerlist.html") }
 
     document.getElementById("mini-menu-news-link").onclick = () => { openLink("") }
-    document.getElementById("mini-menu-rules-link").onclick = () => { openLink("") }
+    document.getElementById("mini-menu-rules-discord-link").onclick = () => { openLink("https://github.com/ItZZefirfy/quantum/blob/main/data/rules-discord.md", "_blank") }
+    document.getElementById("mini-menu-rules-gdps-link").onclick = () => { openLink("https://github.com/ItZZefirfy/quantum/blob/main/data/rules-gdps.md", "_blank") }
     document.getElementById("mini-menu-settings-link").onclick = () => { openLink("") }
     document.getElementById("mini-menu-send-progress").onclick = () => { openLink("") }
 }

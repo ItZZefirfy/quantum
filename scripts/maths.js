@@ -27,17 +27,3 @@ function calculatePlayerLevel(score) {
 
     return [level, score, scoreForLevel]
 }
-
-function searchByLevelID(id, list, type='index') {
-    for (let i = 0; i < list.length; i++) {
-        if (list[i].id == id) {
-            if (type == "index") {
-                return i
-            } else if (type == "level") {
-                return list[i]
-            }
-        }
-    }
-    
-    return -1
-}

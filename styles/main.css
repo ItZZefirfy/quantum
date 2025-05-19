@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800");
 @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 :root {
@@ -706,4 +707,175 @@ main {
 }
 .player h3 {
   color: var(--secondary-text-color);
+}
+
+#loading-wrapper {
+  display: none;
+}
+#loading-wrapper .loader {
+  border: 4px solid var(--light-transparent-frame-color);
+  border-left-color: transparent;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.level-info-container {
+  width: 80vw;
+  max-width: 800px;
+  background-color: var(--transparent-frame-color2);
+  padding: var(--pxl2);
+  border-radius: var(--pxl2);
+  -webkit-backdrop-filter: blur(var(--pxl-1));
+          backdrop-filter: blur(var(--pxl-1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.level-info-container img {
+  border-radius: var(--pxl2);
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin-top: var(--pxl2);
+  margin-bottom: var(--pxl2);
+}
+.level-info-container .level-name {
+  font-size: 2rem;
+}
+.level-info-container .level-inforamtion-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.level-info-container .level-inforamtion-wrapper #show-full-creators-list-button {
+  outline: none;
+  border: none;
+  padding: var(--pxl2);
+  background: transparent;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  transition: var(--transition);
+  border-radius: var(--pxl2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: var(--pxl-1);
+  position: relative;
+  font-size: 1.1rem;
+}
+.level-info-container .level-inforamtion-wrapper #show-full-creators-list-button:hover {
+  background: var(--transparent-frame-color2);
+}
+.level-info-container .level-inforamtion-wrapper .level-information {
+  padding: var(--pxl2);
+  background: transparent;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  transition: var(--transition);
+  border-radius: var(--pxl2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: var(--pxl-1);
+  position: relative;
+}
+.level-info-container .level-inforamtion-wrapper .level-information::after {
+  content: "скопировать";
+  position: absolute;
+  z-index: 1;
+  color: var(--other-text-color);
+  left: 50%;
+  transform: translateX(-50%) translateY(1.1rem);
+  transition: var(--transition);
+  opacity: 0;
+}
+.level-info-container .level-inforamtion-wrapper .level-information:hover {
+  background: var(--transparent-frame-color2);
+  padding-top: 8px;
+  padding-bottom: 24px;
+}
+.level-info-container .level-inforamtion-wrapper .level-information:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(1rem);
+  letter-spacing: 0.1rem;
+}
+.level-info-container .level-inforamtion-wrapper .level-information:hover:active::after {
+  color: var(--main-text-color);
+  letter-spacing: 0;
+}
+
+.victors-wrapper {
+  padding-top: var(--pxl2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.victors-wrapper .victor {
+  width: 80vw;
+  max-width: 800px;
+  -webkit-backdrop-filter: blur(var(--pxl-1));
+          backdrop-filter: blur(var(--pxl-1));
+  background-color: var(--transparent-frame-color2);
+  padding: var(--pxl2);
+  margin: var(--pxl-1);
+  border-radius: var(--pxl2);
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .victors-wrapper .victor:hover {
+    background-color: var(--transparent-frame-color);
+  }
+}
+.victors-wrapper .victor img {
+  height: 100px;
+  padding-right: var(--pxl2);
+}
+.victors-wrapper .victor .victor-text button {
+  outline: none;
+  border: none;
+  background: transparent;
+  border-radius: var(--pxl-1);
+  padding: var(--pxl-1);
+  font-size: 1.3rem;
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+@media (hover: hover) {
+  .victors-wrapper .victor .victor-text button:hover {
+    background-color: var(--transparent-frame-color);
+  }
 }
