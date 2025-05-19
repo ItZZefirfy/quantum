@@ -1,10 +1,9 @@
 function addHeader() {
-    let header = document.getElementsByTagName("header")[0]
-    let headerText =   `<div id="header-wrapper">    
+    const header = document.getElementsByTagName("header")[0]
+    const headerText =   `<div id="header-wrapper">    
                             <a href="index.html" class="main-header"><h1>Главная</h1></a>
-                            <a href="demonlist.html"><h1>демоны</h1></a>
-                            <a href="challengelist.html"><h1>челленджи</h1></a>
-                            <a href="platformerlist.html"><h1>платформеры</h1></a>
+                            <button class="header-button" id="open-site-menu-button">Сайт</button>
+                            <button class="header-button" id="open-lists-menu-button">Листы</button>
                             <button id="open-menu-button"><h1><i class='bx bx-menu'></i>Меню</h1></button>
                         </div>`
     
@@ -12,8 +11,8 @@ function addHeader() {
 }
 
 function addMenu() {
-    let menu = document.getElementById("menu")
-    let menuContent = `
+    const menu = document.getElementById("menu")
+    const menuContent = `
         <h1>GDPS</h1>
 
         <div class="menu-link-wrapper">
@@ -38,12 +37,131 @@ function addMenu() {
     menu.innerHTML += menuContent
 
     document.getElementById("open-menu-button").onclick = () => {
-        const menu = document.getElementById("menu")
         menu.style.transform = "translateX(0)"
     }
 
     document.getElementById("close-menu-button").onclick = () => {
-        const menu = document.getElementById("menu")
         menu.style.transform = "translateX(-100vw)"
     }
+}   
+
+function addMenus() {
+    const body = document.getElementsByTagName("body")[0]
+    const menus = `<div class="mini-menu" id="lists-menu"></div>
+                   <div class="mini-menu" id="site-navigation-menu"></div>`
+
+    const listsMenuContent = `
+        <listMenuButton id="mini-menu-players-link">Игроки</listMenuButton>
+        <listMenuBorder></listMenuBorder>
+        <listMenuButton id="mini-menu-demonlist-link">Демоны</listMenuButton>
+        <listMenuButton id="mini-menu-challengelist-link">Челленджи</listMenuButton>
+        <listMenuButton id="mini-menu-platformerlist-link">Платформеры</listMenuButton>
+    `
+
+    const siteNavigationMenuContent = `
+        <listMenuButton id="mini-menu-news-link">Новости</listMenuButton>
+        <listMenuButton id="mini-menu-rules-link">Правила</listMenuButton>
+        <listMenuButton id="mini-menu-settings-link">Настройки</listMenuButton>
+        <listMenuBorder></listMenuBorder>
+        <listMenuButton id="mini-menu-send-progress">Отправить прохождение</listMenuButton>
+    `
+
+    
+    body.innerHTML += menus    
+    
+    const siteNavigationMenu = document.getElementById("site-navigation-menu")
+    const openSiteMenuButton = document.getElementById("open-site-menu-button")
+    const listsMenu = document.getElementById("lists-menu")
+    const openListsMenuButton = document.getElementById("open-lists-menu-button")
+
+    listsMenu.innerHTML += listsMenuContent
+    siteNavigationMenu.innerHTML += siteNavigationMenuContent
+
+    function setDynamicUserFramePosition() {
+        // navigation menu
+        siteNavigationMenu.style.top = `${openSiteMenuButton.offsetHeight + 24}px`
+        siteNavigationMenu.style.left = `${openSiteMenuButton.offsetLeft + 16}px`
+        
+        // lists menu    
+        listsMenu.style.top = `${openListsMenuButton.offsetHeight + 24}px`
+        listsMenu.style.left = `${openListsMenuButton.offsetLeft + 16}px`
+    }
+
+    setDynamicUserFramePosition()
+
+    addEventListener("resize", () => {
+        setDynamicUserFramePosition()
+    })
+
+    window.isOpen_siteNavigationMenu = false
+    window.isOpen_listsMenu = false
+    
+    window.addEventListener('scroll', (event) => {
+        siteNavigationMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
+        siteNavigationMenu.style.opacity = 0
+        siteNavigationMenu.style.pointerEvents = 'none'
+        window.isOpen_siteNavigationMenu = false
+
+        listsMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
+        listsMenu.style.opacity = 0
+        listsMenu.style.pointerEvents = 'none'
+        window.isOpen_listsMenu = false
+    })
+
+    window.addEventListener('click', (event) => {
+        if (!event.target.matches('#site-navigation-menu') 
+            && window.isOpen_siteNavigationMenu) {
+            siteNavigationMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
+            siteNavigationMenu.style.opacity = 0
+            siteNavigationMenu.style.pointerEvents = 'none'
+            window.isOpen_siteNavigationMenu = false
+        } else if (event.target.matches('#open-site-menu-button')) {
+            if (siteNavigationMenu.style.opacity == 0) {
+                siteNavigationMenu.style.transform = 'translateY(var(--pxl2)) translateX(calc(-1 * var(--pxl3)))'
+                siteNavigationMenu.style.opacity = 1
+                siteNavigationMenu.style.pointerEvents = 'all'
+            } else {
+                siteNavigationMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
+                siteNavigationMenu.style.opacity = 0
+                siteNavigationMenu.style.pointerEvents = 'none'
+            }
+
+            window.isOpen_siteNavigationMenu = !window.isOpen_siteNavigationMenu
+        }
+
+        if (!event.target.matches('#lists-menu')
+            && window.isOpen_listsMenu) {
+            listsMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
+            listsMenu.style.opacity = 0
+            listsMenu.style.pointerEvents = 'none'
+            window.isOpen_listsMenu = false
+
+        } else if (event.target.matches('#open-lists-menu-button')) {
+            if (listsMenu.style.opacity == 0) {
+                listsMenu.style.transform = 'translateY(var(--pxl2)) translateX(calc(-1 * var(--pxl3)))'
+                listsMenu.style.opacity = 1
+                listsMenu.style.pointerEvents = 'all'
+            } else {
+                listsMenu.style.transform = 'translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)))'
+                listsMenu.style.opacity = 0
+                listsMenu.style.pointerEvents = 'none'
+            }
+
+            window.isOpen_listsMenu = !window.isOpen_listsMenu
+        }
+    })
+
+    function openLink(href) {
+        window.open(href, "_self")
+    }
+
+    document.getElementById("mini-menu-players-link").onclick = () => { openLink("players.html") }
+    document.getElementById("mini-menu-demonlist-link").onclick = () => { openLink("demonlist.html") }
+    document.getElementById("mini-menu-challengelist-link").onclick = () => { openLink("challengelist.html") }
+    document.getElementById("mini-menu-platformerlist-link").onclick = () => { openLink("platformerlist.html") }
+
+    document.getElementById("mini-menu-news-link").onclick = () => { openLink("") }
+    document.getElementById("mini-menu-rules-link").onclick = () => { openLink("") }
+    document.getElementById("mini-menu-settings-link").onclick = () => { openLink("") }
+    document.getElementById("mini-menu-send-progress").onclick = () => { openLink("") }
 }

@@ -147,17 +147,19 @@
             "previewFormat": false,
             "customPreview": false
         },
+
         {
             "id": 5,
             "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "player": "Zefirfy",
+            "player": "artembird",
             "previewFormat": false,
             "customPreview": false
         },
+        
         {
             "id": 9,
             "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "player": "Zefirfy",
+            "player": "artembird",
             "previewFormat": false,
             "customPreview": false
         }

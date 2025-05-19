@@ -1,4 +1,5 @@
 addHeader()
 addFooter()
 updateData()
+addMenus()
 addMenu()

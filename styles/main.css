@@ -87,7 +87,7 @@ header {
   flex-wrap: nowrap;
 }
 @media (min-width: 761px) {
-  #header-wrapper button {
+  #header-wrapper #open-menu-button {
     display: none;
   }
 }
@@ -100,7 +100,7 @@ header {
     width: 80vw;
     border-radius: var(--pxl2);
   }
-  #header-wrapper a {
+  #header-wrapper .header-button, #header-wrapper .main-header {
     display: none;
   }
 }
@@ -109,21 +109,20 @@ header {
   padding: var(--pxl-1);
   transition: var(--transition);
 }
-#header-wrapper a {
+#header-wrapper .main-header {
   text-decoration: none;
+}
+#header-wrapper .header-button {
   border-radius: var(--pxl2);
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 @media (hover: hover) {
-  #header-wrapper a:hover {
+  #header-wrapper .header-button:hover, #header-wrapper .main-header:hover {
     text-shadow: 0 0 var(--pxl2) var(--secondary-text-color);
-    color: var(--secondary-text-color);
-  }
-}
-@media (hover: hover) {
-  #header-wrapper a:not(.main-header):hover {
-    background-color: var(--light-transparent-frame-color2);
-    -webkit-backdrop-filter: blur(var(--pxl-1));
-            backdrop-filter: blur(var(--pxl-1));
   }
 }
 #header-wrapper #open-menu-button {
@@ -340,6 +339,61 @@ footer .footer-layer a {
   #close-menu-button:hover * {
     color: var(--light-main-text-color);
   }
+}
+
+#temp-wrapper {
+  display: flex;
+}
+
+.mini-menu {
+  position: absolute;
+  background-color: var(--transparent-frame-color2);
+  padding: var(--pxl-1);
+  border-radius: var(--pxl2);
+  display: flex;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(64px);
+          backdrop-filter: blur(64px);
+  transition: var(--transition);
+  transform: translateY(calc(-1 * var(--pxl2))) translateX(calc(-1 * var(--pxl3)));
+  opacity: 0;
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+  .mini-menu {
+    display: none;
+  }
+}
+.mini-menu listMenuButton {
+  margin: var(--pxl-1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: var(--pxl-1);
+  border-radius: var(--pxl-1);
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .mini-menu listMenuButton:hover {
+    background-color: var(--transparent-frame-color2);
+  }
+}
+.mini-menu listMenuBorder {
+  height: 1rem;
+  position: relative;
+  margin-left: var(--pxl-1);
+  margin-right: var(--pxl-1);
+}
+.mini-menu listMenuBorder::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background-color: var(--transparent-frame-color);
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .social-media-wrapper {

@@ -33,7 +33,7 @@ header {
     flex-wrap: nowrap;
 
     @media (min-width: 761px) {
-        button {
+        #open-menu-button {
             display: none;
         }
     }
@@ -46,7 +46,7 @@ header {
 
         border-radius: var(--pxl2);
 
-        a {
+        .header-button, .main-header {
             display: none;
         }
     }
@@ -57,23 +57,24 @@ header {
         transition: var(--transition);
     }
 
-    a {
+    .main-header {
         text-decoration: none;
-        border-radius: var(--pxl2);
+    }  
 
+    .header-button {
+        border-radius: var(--pxl2);
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        font-size: 1.5rem;
+    }
+
+    .header-button, .main-header {
         @media (hover: hover) {
             &:hover {
                 text-shadow: 0 0 var(--pxl2) var(--secondary-text-color);
-                color: var(--secondary-text-color);
-            }
-        }
-    }
-
-    a:not(.main-header) {
-        @media (hover: hover) {
-            &:hover {
-                background-color: var(--light-transparent-frame-color2);
-                backdrop-filter: blur(var(--pxl-1));
             }
         }
     }

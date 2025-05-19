@@ -26,8 +26,6 @@ function generateLevels(type) {
 
     var preview
 
-    console.log(levels)
-
     for (let i = 0; i < levels.length; i++) {
         if (levels[i].customPreview == false) {
             if (levels[i].previewFormat == false) {
