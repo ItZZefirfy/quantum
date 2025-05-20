@@ -701,6 +701,9 @@ main {
 }
 .player img {
   padding-right: var(--pxl1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .player h1 > span {
   color: var(--other-text-color);
@@ -729,7 +732,7 @@ main {
     transform: rotate(360deg);
   }
 }
-.content-wrapper {
+#content-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -762,7 +765,7 @@ main {
 .level-info-container .level-name {
   font-size: 2rem;
 }
-.level-info-container .level-inforamtion-wrapper {
+.level-info-container .level-information-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -770,7 +773,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
 }
-.level-info-container .level-inforamtion-wrapper #show-full-creators-list-button {
+.level-info-container .level-information-wrapper #show-full-creators-list-button {
   outline: none;
   border: none;
   padding: var(--pxl2);
@@ -788,10 +791,10 @@ main {
   position: relative;
   font-size: 1.1rem;
 }
-.level-info-container .level-inforamtion-wrapper #show-full-creators-list-button:hover {
+.level-info-container .level-information-wrapper #show-full-creators-list-button:hover {
   background: var(--transparent-frame-color2);
 }
-.level-info-container .level-inforamtion-wrapper .level-information {
+.level-info-container .level-information-wrapper .level-information {
   padding: var(--pxl2);
   background: transparent;
   word-break: break-word;
@@ -802,31 +805,36 @@ main {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  cursor: pointer;
   margin: var(--pxl-1);
   position: relative;
 }
-.level-info-container .level-inforamtion-wrapper .level-information::after {
+.level-info-container .level-information-wrapper .level-information:hover {
+  background: var(--transparent-frame-color2);
+}
+.level-info-container .level-information-wrapper .level-information-copy {
+  cursor: pointer;
+}
+.level-info-container .level-information-wrapper .level-information-copy::after {
   content: "скопировать";
   position: absolute;
   z-index: 1;
+  pointer-events: none;
   color: var(--other-text-color);
   left: 50%;
   transform: translateX(-50%) translateY(1.1rem);
   transition: var(--transition);
   opacity: 0;
 }
-.level-info-container .level-inforamtion-wrapper .level-information:hover {
-  background: var(--transparent-frame-color2);
+.level-info-container .level-information-wrapper .level-information-copy:hover {
   padding-top: 8px;
   padding-bottom: 24px;
 }
-.level-info-container .level-inforamtion-wrapper .level-information:hover::after {
+.level-info-container .level-information-wrapper .level-information-copy:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(1rem);
   letter-spacing: 0.1rem;
 }
-.level-info-container .level-inforamtion-wrapper .level-information:hover:active::after {
+.level-info-container .level-information-wrapper .level-information-copy:hover:active::after {
   color: var(--main-text-color);
   letter-spacing: 0;
 }
@@ -861,6 +869,9 @@ main {
 .victors-wrapper .victor img {
   height: 100px;
   padding-right: var(--pxl2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .victors-wrapper .victor .victor-text button {
   outline: none;

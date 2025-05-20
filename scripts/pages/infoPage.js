@@ -17,6 +17,9 @@ function infoPage() {
         }
 
         document.title = level.name
+
+        // creating interface
+        addLevelInfo(level, data.progresses, data.players)
     
     } else if (linkData.type == "player") {
     

@@ -31,18 +31,12 @@ function generateLevels(type) {
             if (levels[i].previewFormat == false) {
                 preview = links.dataPath + links.previewsFolder + 
                     levels[i].id + defaultFormats.levelPreview
-                console.log(preview)
-                console.log(1)
             } else {
                 preview = links.dataPath + links.previewsFolder + 
                     levels[i].id + levels[i].previewFormat
-                console.log(preview)
-                console.log(2)
             }
         } else {
             preview = levels[i].customPreview
-            console.log(preview)
-            console.log(3)
         }
 
 
@@ -55,4 +49,97 @@ function generateLevels(type) {
             levels[i].id
         )
     }
+}
+
+function addLevelInfo(level, records, players) {
+    var levelLength
+    var levelPreview
+
+    // sorting records
+    records.sort((a, b) => a.postID - b.postID)
+
+    if (level.customPreview == false) {
+        if (level.previewFormat == false) {
+            levelPreview = links.dataPath + links.previewsFolder + 
+                level.id + defaultFormats.levelPreview
+        } else {
+            levelPreview = links.dataPath + links.previewsFolder + 
+                level.id + level.previewFormat
+        }
+    } else {
+        levelPreview = level.customPreview
+    }
+        
+    if (level.info.length[0] == 0) {
+        levelLength = level.info.length[1] + 'с'
+    } else {
+        levelLength = level.info.length[0] + 'мин ' + level.info.length[1] + 'с'
+    }
+    
+    const levelInfoContent = `<div class="level-info-container">
+                    <div class="level-name">${level.name}</div>
+                    <img src="${levelPreview}" alt="level preview">
+                    <div class="level-information-wrapper">
+                        <div class="level-information level-information-copy"
+                            onclick="navigator.clipboard.writeText('${levelLength}')">ДЛИННА: ${levelLength}</div>
+                        <div class="level-information level-information-copy"
+                            onclick="navigator.clipboard.writeText('${level.creator}')">АВТОР: ${level.creator}</div>
+                        <div class="level-information level-information-copy"
+                            onclick="navigator.clipboard.writeText('${level.verifier}')">ВЕРИФИКАТОР: ${level.verifier}</div>
+                        <div class="level-information level-information-copy"
+                            onclick="navigator.clipboard.writeText('${level.id}')">ID УРОВНЯ: ${level.id}</div>
+                        <button id="show-full-creators-list-button">Полный список креаторов</button>
+                    </div>
+                </div>`
+                /*<div class="victors-wrapper">
+                    <div class="victor">
+                        <img src="data/icons/--default--.png" alt="level preview">
+                        <div class="victor-text">
+                            <h1>Zefurka</h1>
+                            <button><i class='bx  bx-play'></i>Видео</button>
+                        </div>
+                    </div>
+                    <div class="victor">
+                        <img src="data/icons/--default--.png" alt="level preview">
+                        <div class="victor-text">
+                            <h1>Venom</h1>
+                            <button><i class='bx  bx-play'></i>Видео</button>
+                        </div>
+                    </div>
+                </div>`*/
+    
+    var victors= ''
+    var victor = ''
+    var victorIcon = ''
+
+    for (let i = 0; i < records.length; i++) {
+        if (records[i].id == level.id) {
+            victor = searchPlayerByName(records[i].player, players)
+            if (victor.icon == false) {
+                victorIcon = links.dataPath + links.iconsFolder + '--default--.png'
+            } else if (victor.icon == true) {
+                victorIcon = links.dataPath + links.iconsFolder + 
+                            victor.name + defaultFormats.playerIcon
+            } else {
+                victorIcon = victor.icon
+            }
+
+            victors += `
+                    <div class="victor">
+                        <img src="${victorIcon}" alt="player icon">
+                        <div class="victor-text">
+                            <h1>${records[i].player}</h1>
+                            <button><i class='bx  bx-play'></i>Видео</button>
+                        </div>
+                    </div>
+            `
+        }
+    }
+    
+    const victorsWrapper = `<div class="victors-wrapper">${victors}</div>`
+
+    const content = levelInfoContent + victorsWrapper
+
+    const contentWrapper = document.getElementById("content-wrapper")
+    contentWrapper.innerHTML += content
 }

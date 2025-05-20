@@ -12,6 +12,23 @@ function calculateLevelScore(levelPosition, totalLevels) {
     return score
 }
 
+function calculateProgressScore(maxScore, percent) {
+    const minScore = 40
+    const minPart = 10
+    const coefficient = 0.1
+
+    const result = Math.round(
+        Math.pow(maxScore,
+        1 / Math.pow(101 - percent, coefficient)
+    ))
+
+    if (result < minScore || result < maxScore / minPart) {
+        return 0
+    }
+
+    return result
+}
+
 function calculatePlayerLevel(score) {
     const power = 1.5
     const coefficient = 10

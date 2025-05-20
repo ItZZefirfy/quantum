@@ -62,43 +62,43 @@
 
 .about--quantum-dust-wrapper #quantum-dust-1 {
   animation-name: quantum-dust-1-animation;
-  animation-duration: 1.314s;
+  animation-duration: 2.635s;
 }
 .about--quantum-dust-wrapper #quantum-dust-2 {
   animation-name: quantum-dust-2-animation;
-  animation-duration: 1.591s;
+  animation-duration: 1.456s;
 }
 .about--quantum-dust-wrapper #quantum-dust-3 {
   animation-name: quantum-dust-3-animation;
-  animation-duration: 1.465s;
+  animation-duration: 2.017s;
 }
 .about--quantum-dust-wrapper #quantum-dust-4 {
   animation-name: quantum-dust-4-animation;
-  animation-duration: 1.953s;
+  animation-duration: 2.753s;
 }
 .about--quantum-dust-wrapper #quantum-dust-5 {
   animation-name: quantum-dust-5-animation;
-  animation-duration: 3.357s;
+  animation-duration: 1.968s;
 }
 .about--quantum-dust-wrapper #quantum-dust-6 {
   animation-name: quantum-dust-6-animation;
-  animation-duration: 2.628s;
+  animation-duration: 3.39s;
 }
 .about--quantum-dust-wrapper #quantum-dust-7 {
   animation-name: quantum-dust-7-animation;
-  animation-duration: 2.052s;
+  animation-duration: 1.986s;
 }
 .about--quantum-dust-wrapper #quantum-dust-8 {
   animation-name: quantum-dust-8-animation;
-  animation-duration: 2.695s;
+  animation-duration: 3.42s;
 }
 .about--quantum-dust-wrapper #quantum-dust-9 {
   animation-name: quantum-dust-9-animation;
-  animation-duration: 3.719s;
+  animation-duration: 2.156s;
 }
 .about--quantum-dust-wrapper #quantum-dust-10 {
   animation-name: quantum-dust-10-animation;
-  animation-duration: 3.43s;
+  animation-duration: 3.841s;
 }
 
 @keyframes quantum-dust-1-animation {
@@ -106,10 +106,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(60% * var(--dust-effect-scale))) translateY(calc(-462% * var(--dust-effect-scale)));
+    transform: translateX(calc(-24% * var(--dust-effect-scale))) translateY(calc(-248% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(-60% * var(--dust-effect-scale))) translateY(calc(462% * var(--dust-effect-scale)));
+    transform: translateX(calc(24% * var(--dust-effect-scale))) translateY(calc(248% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -120,10 +120,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(36% * var(--dust-effect-scale))) translateY(calc(-127% * var(--dust-effect-scale)));
+    transform: translateX(calc(-252% * var(--dust-effect-scale))) translateY(calc(-71% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(-36% * var(--dust-effect-scale))) translateY(calc(127% * var(--dust-effect-scale)));
+    transform: translateX(calc(252% * var(--dust-effect-scale))) translateY(calc(71% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -134,10 +134,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(248% * var(--dust-effect-scale))) translateY(calc(313% * var(--dust-effect-scale)));
+    transform: translateX(calc(211% * var(--dust-effect-scale))) translateY(calc(500% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(-248% * var(--dust-effect-scale))) translateY(calc(-313% * var(--dust-effect-scale)));
+    transform: translateX(calc(-211% * var(--dust-effect-scale))) translateY(calc(-500% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -148,10 +148,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(334% * var(--dust-effect-scale))) translateY(calc(304% * var(--dust-effect-scale)));
+    transform: translateX(calc(-406% * var(--dust-effect-scale))) translateY(calc(-443% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(-334% * var(--dust-effect-scale))) translateY(calc(-304% * var(--dust-effect-scale)));
+    transform: translateX(calc(406% * var(--dust-effect-scale))) translateY(calc(443% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -162,10 +162,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(-178% * var(--dust-effect-scale))) translateY(calc(65% * var(--dust-effect-scale)));
+    transform: translateX(calc(270% * var(--dust-effect-scale))) translateY(calc(-65% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(178% * var(--dust-effect-scale))) translateY(calc(-65% * var(--dust-effect-scale)));
+    transform: translateX(calc(-270% * var(--dust-effect-scale))) translateY(calc(65% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -176,10 +176,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(-495% * var(--dust-effect-scale))) translateY(calc(-350% * var(--dust-effect-scale)));
+    transform: translateX(calc(-491% * var(--dust-effect-scale))) translateY(calc(79% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(495% * var(--dust-effect-scale))) translateY(calc(350% * var(--dust-effect-scale)));
+    transform: translateX(calc(491% * var(--dust-effect-scale))) translateY(calc(-79% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -190,10 +190,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(-22% * var(--dust-effect-scale))) translateY(calc(-257% * var(--dust-effect-scale)));
+    transform: translateX(calc(81% * var(--dust-effect-scale))) translateY(calc(290% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(22% * var(--dust-effect-scale))) translateY(calc(257% * var(--dust-effect-scale)));
+    transform: translateX(calc(-81% * var(--dust-effect-scale))) translateY(calc(-290% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -204,10 +204,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(394% * var(--dust-effect-scale))) translateY(calc(-374% * var(--dust-effect-scale)));
+    transform: translateX(calc(240% * var(--dust-effect-scale))) translateY(calc(-423% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(-394% * var(--dust-effect-scale))) translateY(calc(374% * var(--dust-effect-scale)));
+    transform: translateX(calc(-240% * var(--dust-effect-scale))) translateY(calc(423% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -218,10 +218,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(181% * var(--dust-effect-scale))) translateY(calc(275% * var(--dust-effect-scale)));
+    transform: translateX(calc(-158% * var(--dust-effect-scale))) translateY(calc(21% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(-181% * var(--dust-effect-scale))) translateY(calc(-275% * var(--dust-effect-scale)));
+    transform: translateX(calc(158% * var(--dust-effect-scale))) translateY(calc(-21% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -232,10 +232,10 @@
     transform: translateX(0) translateY(0);
   }
   33% {
-    transform: translateX(calc(-251% * var(--dust-effect-scale))) translateY(calc(-37% * var(--dust-effect-scale)));
+    transform: translateX(calc(245% * var(--dust-effect-scale))) translateY(calc(154% * var(--dust-effect-scale)));
   }
   66% {
-    transform: translateX(calc(251% * var(--dust-effect-scale))) translateY(calc(37% * var(--dust-effect-scale)));
+    transform: translateX(calc(-245% * var(--dust-effect-scale))) translateY(calc(-154% * var(--dust-effect-scale)));
   }
   100% {
     transform: translateX(0) translateY(0);
