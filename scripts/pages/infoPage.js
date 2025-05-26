@@ -22,7 +22,8 @@ function infoPage() {
         addLevelInfo(level, data.progresses, data.players)
     
     } else if (linkData.type == "player") {
-    
+        var player = searchPlayerByName(linkData.player, data.players)
+        addPlayerInfo(player, data.progresses)
     } else {
         document.title = "не удалось найти"
     }

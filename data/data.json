@@ -2,7 +2,7 @@
     "players": [
         {
             "displayName": "Zefurka",
-            "name":"Zefirfy",
+            "name":"zefirfy",
             "icon": false
         },
 
@@ -164,7 +164,7 @@
     "platformerlist": [
         {
             "name": "Tartarus",
-            "verifier": "Zefirfy",
+            "verifier": "zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
             "id": 9,
@@ -182,7 +182,7 @@
 
         {
             "name": "Tartarus",
-            "verifier": "Zefirfy",
+            "verifier": "zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
             "id": 10,
@@ -200,7 +200,7 @@
 
         {
             "name": "Tartarus",
-            "verifier": "Zefirfy",
+            "verifier": "zefirfy",
             "creator": "Artembird",
             "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
             "id": 11,
@@ -239,9 +239,11 @@
         {
             "id": 1,
             "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "player": "Zefirfy",
+            "player": "zefirfy",
             "previewFormat": false,
             "customPreview": false,
+            "verification": false,
+            "percent": 100,
             "postID":0
         },
 
@@ -251,6 +253,8 @@
             "player": "artembird",
             "previewFormat": false,
             "customPreview": false,
+            "verification": true,
+            "percent": 100,
             "postID":2
         },
 
@@ -260,6 +264,8 @@
             "player": "artembird",
             "previewFormat": false,
             "customPreview": false,
+            "verification": false,
+            "percent": 89,
             "postID":3
         }
     ],

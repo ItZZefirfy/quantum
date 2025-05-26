@@ -32,7 +32,7 @@ function openLevelInfo(id) {
 
 function openPlayerInfo(name) {
     let link = `
-        info.html?type=player&levelID=${name}
+        info.html?type=player&player=${name}
     `
     openLink(link)
 }

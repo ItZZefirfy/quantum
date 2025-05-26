@@ -13,7 +13,7 @@ function drawPlayer(name, displayName, icon, position, points) {
     }
 
     let playerGui = `
-        <div class="player">
+        <div class="player" onclick="openPlayerInfo('${name}')">
             <img height="100px" src="${iconLink}" alt="player-icon">
             <div class="player-name-wrapper">
                 <h1><span>#${position} </span>${displayName}</h1>
@@ -38,7 +38,7 @@ function generatePlayers() {
         concretePlayer.points = 0
         for (let i = 0; i < records.length; i++) {
             if (records[i].player == concretePlayer.name) {
-                concretePlayer.points += idsToPoints[records[i].id]
+                concretePlayer.points += calculateProgressScore(idsToPoints[records[i].id], records[i].percent)
             }
         }
         updatedPlayerList.push(concretePlayer)
@@ -67,4 +67,72 @@ function generatePlayers() {
             updatedPlayerList[i].points
         )
     }
+}
+
+function addPlayerInfo(player, 
+                       records) {
+
+    var points = 0
+    var idsToPoints = JSON.parse(sessionStorage.idsToPoints)
+
+    for (let i = 0; i < records.length; i++) {
+        if (player.name == records[i].player) {
+            points += calculateProgressScore(idsToPoints[records[i].id], records[i].percent)
+        }
+    }
+
+    const level = calculatePlayerLevel(points)[0]
+    const score = calculatePlayerLevel(points)[1]
+    const scoreForLevel = calculatePlayerLevel(points)[2]
+
+    let tier = 1
+
+    if (level >= 10) {
+        tier = 2
+    } else if (level >= 10) {
+        tier = 3
+    } else if (level >= 20) {
+        tier = 4
+    } else if (level >= 25) {
+        tier = 5
+    } else if (level >= 30) {
+        tier = 6
+    }
+
+    document.querySelector(':root').style.setProperty('--player-level-progress', Math.round(score / scoreForLevel * 100) + '%')
+
+    const playerInfo = `<div class="player-info-wrapper">
+                            <div class="user-name-wrapper">
+                                <div class="player-nickname">${player.displayName}</div>
+                                <div class="player-level player-level-tier-${tier}">уровень ${level}</div>
+                            </div>
+        
+                            <div class="player-level-bar-wrapper">
+                                <div class="player-level-bar">
+                                    <div class="player-level-progress-bar"></div>
+                                </div>
+                                <div>${score} / ${scoreForLevel}</div>
+                            </div>
+                        </div>`
+    
+    /*const playerLevels =`<div class="player-complied-levels">
+                                                    <div class="player-complied-level">
+                                                        <img src="data/previews/testing.png" alt="level preview">
+                                                        <div class="complied-level-text">
+                                                            <h1>Tartarus</h1>
+                                                            <h3>dogorix</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="player-complied-level">
+                                                        <img src="data/previews/testing.png" alt="level preview">
+                                                        <div class="complied-level-text">
+                                                            <h1>Tartarus</h1>
+                                                            <h3>dogorix</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>`*/
+                
+                
+    const contentWrapper = document.getElementById("content-wrapper")
+    contentWrapper.innerHTML += playerInfo
 }

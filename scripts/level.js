@@ -91,29 +91,14 @@ function addLevelInfo(level, records, players) {
                         <button id="show-full-creators-list-button">Полный список креаторов</button>
                     </div>
                 </div>`
-                /*<div class="victors-wrapper">
-                    <div class="victor">
-                        <img src="data/icons/--default--.png" alt="level preview">
-                        <div class="victor-text">
-                            <h1>Zefurka</h1>
-                            <button><i class='bx  bx-play'></i>Видео</button>
-                        </div>
-                    </div>
-                    <div class="victor">
-                        <img src="data/icons/--default--.png" alt="level preview">
-                        <div class="victor-text">
-                            <h1>Venom</h1>
-                            <button><i class='bx  bx-play'></i>Видео</button>
-                        </div>
-                    </div>
-                </div>`*/
     
     var victors= ''
     var victor = ''
     var victorIcon = ''
 
     for (let i = 0; i < records.length; i++) {
-        if (records[i].id == level.id) {
+        if (records[i].id == level.id && !records[i].verification) {
+
             victor = searchPlayerByName(records[i].player, players)
             if (victor.icon == false) {
                 victorIcon = links.dataPath + links.iconsFolder + '--default--.png'
@@ -128,8 +113,8 @@ function addLevelInfo(level, records, players) {
                     <div class="victor">
                         <img src="${victorIcon}" alt="player icon">
                         <div class="victor-text">
-                            <h1>${records[i].player}</h1>
-                            <button><i class='bx  bx-play'></i>Видео</button>
+                            <h1>${records[i].player} - ${records[i].percent}%</h1>
+                            <button onclick="openLink('${records[i].video}', '_blank')"><i class='bx  bx-play'></i>Видео</button>
                         </div>
                     </div>
             `

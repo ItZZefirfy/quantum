@@ -220,3 +220,191 @@
 
     }
 }
+
+.player-info-wrapper {
+    width: 80vw;
+    max-width: 800px;
+
+    backdrop-filter: blur(var(--pxl-1));
+    background-color: var(--transparent-frame-color2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--pxl2);
+    border-radius: var(--pxl2);
+}
+
+.user-name-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-level-bar-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width: 80%;
+}
+
+.player-level-bar {
+    background-color: var(--transparent-frame-color2);
+    width: 80%;
+    height: var(--pxl2);
+    border-radius: var(--pxl2);
+
+    margin-right: var(--pxl2);
+    position: relative;
+
+    .player-level-progress-bar {
+        width: var(--player-level-progress);
+        height: 100%;
+        border-radius: var(--pxl2);
+
+        animation: player-level-bar-spawn-animation;
+        animation-duration: .6s;
+        animation-timing-function: ease-out;
+
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            background: linear-gradient(to right,
+                                        #dd6add, 
+                                        #7aee7a, 
+                                        #7070e2);
+
+            width: 64vw;
+            max-width: 640px;
+            height: 100%;
+
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    }
+}
+
+.user-name-wrapper {
+    font-size: 1.5rem;
+    margin-bottom: var(--pxl2);
+}
+
+.player-level {
+    --background: transparent;
+    --text: white;
+    --padding: 8px;
+    --border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+
+    margin-left: var(--pxl2);
+
+    background: var(--background);
+    color: var(--text);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+}
+
+.player-level-tier-1 {
+    --background: transparent;
+    --text: white;
+    --padding: 8px;
+    --border-radius: 8px;
+}
+
+.player-level-tier-2 {
+    --background: #232323;
+    --text: white;
+    --padding: 4px;
+    --border-radius: 0;
+}
+
+.player-level-tier-3 {
+    --background: #44434e;
+    --text: #b3aae6;
+    --padding: 8px;
+    --border-radius: 8px;
+}
+
+.player-level-tier-4 {
+    --background: #b07cb9;
+    --text: white;
+    --padding: 8px 12px;
+    --border-radius: 12px;
+}
+
+.player-level-tier-5 {
+    --background: #f1953f;
+    --text: white;
+    --padding: 8px 12px;
+    --border-radius: 12px;
+}
+
+.player-level-tier-6 {
+    --background: linear-gradient(135deg, #ec3434, #eea12f);
+    --text: white;
+    --padding: 8px 12px;
+    --border-radius: 16px;
+}
+
+.player-complied-level {
+    background-color: var(--transparent-frame-color2);
+    border-radius: var(--pxl2);
+    padding: var(--pxl2);
+    
+    backdrop-filter: blur(var(--pxl-1));
+    margin: var(--pxl2);
+
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    
+    width: 80vw;
+
+    transition: var(--transition);
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--transparent-frame-color);
+        }
+    }
+    
+    img {
+        border-radius: var(--pxl1);
+        height: 150px;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .complied-level-text {
+        margin-left: var(--pxl2);
+    }
+    
+}
+
+
+@keyframes player-level-bar-spawn-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: var(--player-level-progress);
+    }
+}
