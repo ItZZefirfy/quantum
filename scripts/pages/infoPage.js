@@ -23,7 +23,13 @@ function infoPage() {
     
     } else if (linkData.type == "player") {
         var player = searchPlayerByName(linkData.player, data.players)
-        addPlayerInfo(player, data.progresses)
+        addPlayerInfo(
+            player, 
+            data.progresses,
+            data.demonlist, 
+            data.challengelist, 
+            data.platformerlist
+        )
     } else {
         document.title = "не удалось найти"
     }

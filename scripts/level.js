@@ -3,7 +3,7 @@ function drawLevel(levelName, author, previewLink, videoLink, position, levelID)
 
     let level = `<div class="level" onclick="openLevelInfo(${levelID})">
                     <img src="${previewLink}" alt="level preview" class="level-element" 
-                        onclick="window.open('${videoLink}', '_blank')">
+                        onclick="openLink('${videoLink}', '_blank')">
                     <div class="level-text-wrapper level-element">
                         <h1 class="level-main-text"><span class="level-name-secondary-text"> #${position} </span>${levelName}</h1>
                         <h3 class="level-secondary-text">by ${author}</h3>
@@ -78,7 +78,7 @@ function addLevelInfo(level, records, players) {
     
     const levelInfoContent = `<div class="level-info-container">
                     <div class="level-name">${level.name}</div>
-                    <img src="${levelPreview}" alt="level preview">
+                    <img src="${levelPreview}" alt="level preview" onclick="openLink('${level.videoLink}', '_blank')">
                     <div class="level-information-wrapper">
                         <div class="level-information level-information-copy"
                             onclick="navigator.clipboard.writeText('${levelLength}')">ДЛИННА: ${levelLength}</div>
@@ -110,7 +110,7 @@ function addLevelInfo(level, records, players) {
             }
 
             victors += `
-                    <div class="victor">
+                    <div class="victor" onclick="openPlayerInfo('${records[i].player}')">
                         <img src="${victorIcon}" alt="player icon">
                         <div class="victor-text">
                             <h1>${records[i].player} - ${records[i].percent}%</h1>

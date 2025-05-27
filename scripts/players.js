@@ -70,14 +70,47 @@ function generatePlayers() {
 }
 
 function addPlayerInfo(player, 
-                       records) {
+                       records,
+                       demonlist,
+                       challengelist,
+                       platformerlist) {
 
     var points = 0
     var idsToPoints = JSON.parse(sessionStorage.idsToPoints)
+    var playerLevels = ''
+    var concreteLevel = -1
+    var levelPreview = ''
 
     for (let i = 0; i < records.length; i++) {
         if (player.name == records[i].player) {
             points += calculateProgressScore(idsToPoints[records[i].id], records[i].percent)
+
+            // searching
+            concreteLevel = concreteLevel == -1 ? searchByLevelID(records[i].id, demonlist, type="level") : concreteLevel
+            concreteLevel = concreteLevel == -1 ? searchByLevelID(records[i].id, challengelist, type="level") : concreteLevel
+            concreteLevel = concreteLevel == -1 ? searchByLevelID(records[i].id, platformerlist, type="level") : concreteLevel
+
+            // calculating preview link
+            if (concreteLevel.customPreview == false) {
+                if (concreteLevel.previewFormat == false) {
+                    levelPreview = links.dataPath + links.previewsFolder + 
+                        concreteLevel.id + defaultFormats.levelPreview
+                } else {
+                    levelPreview = links.dataPath + links.previewsFolder + 
+                        concreteLevel.id + concreteLevel.previewFormat
+                }
+            } else {
+                levelPreview = concreteLevel.customPreview
+            }
+
+            // saving player interface
+            playerLevels +=`<div class="player-complied-level" onclick="openLevelInfo(${concreteLevel.id})">
+                                <img src="${levelPreview}" alt="level preview" onclick="openLink('${concreteLevel.videoLink}', target='_blank')">
+                                <div class="complied-level-text">
+                                    <h1>${concreteLevel.name} - ${records[i].percent}%</h1>
+                                    <h3>${concreteLevel.creator}</h3>
+                                </div>
+                            </div>`
         }
     }
 
@@ -114,25 +147,10 @@ function addPlayerInfo(player,
                                 <div>${score} / ${scoreForLevel}</div>
                             </div>
                         </div>`
-    
-    /*const playerLevels =`<div class="player-complied-levels">
-                                                    <div class="player-complied-level">
-                                                        <img src="data/previews/testing.png" alt="level preview">
-                                                        <div class="complied-level-text">
-                                                            <h1>Tartarus</h1>
-                                                            <h3>dogorix</h3>
-                                                        </div>
-                                                    </div>
-                                                    <div class="player-complied-level">
-                                                        <img src="data/previews/testing.png" alt="level preview">
-                                                        <div class="complied-level-text">
-                                                            <h1>Tartarus</h1>
-                                                            <h3>dogorix</h3>
-                                                        </div>
-                                                    </div>
-                                                </div>`*/
-                
-                
+
+    const content = `${playerInfo}
+    <div class="player-complied-levels">${playerLevels}</div>`
+ 
     const contentWrapper = document.getElementById("content-wrapper")
-    contentWrapper.innerHTML += playerInfo
+    contentWrapper.innerHTML += content
 }

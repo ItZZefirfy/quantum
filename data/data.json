@@ -253,7 +253,7 @@
             "player": "artembird",
             "previewFormat": false,
             "customPreview": false,
-            "verification": true,
+            "verification": false,
             "percent": 100,
             "postID":2
         },
