@@ -55,6 +55,10 @@
 
     .level-name {
         font-size: 2rem;
+        text-align: center;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
     }
 
     .level-information-wrapper {
@@ -195,6 +199,9 @@
         }
 
         .victor-text {
+            word-break: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
             button {
                 outline: none;
                 border: none;
@@ -388,13 +395,21 @@
     
     img {
         border-radius: var(--pxl1);
-        height: 150px;
+        width: 30vw;
         user-select: none;
         cursor: pointer;
+        max-width: 250px;
     }
 
     .complied-level-text {
         margin-left: var(--pxl2);
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+
+        @media (max-width: 778px) {
+            font-size: 1.6vw;
+        }
     }
     
 }

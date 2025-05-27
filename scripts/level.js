@@ -81,7 +81,7 @@ function addLevelInfo(level, records, players) {
                     <img src="${levelPreview}" alt="level preview" onclick="openLink('${level.videoLink}', '_blank')">
                     <div class="level-information-wrapper">
                         <div class="level-information level-information-copy"
-                            onclick="navigator.clipboard.writeText('${levelLength}')">ДЛИННА: ${levelLength}</div>
+                            onclick="navigator.clipboard.writeText('${levelLength}')">ДЛИНА: ${levelLength}</div>
                         <div class="level-information level-information-copy"
                             onclick="navigator.clipboard.writeText('${level.creator}')">АВТОР: ${level.creator}</div>
                         <div class="level-information level-information-copy"

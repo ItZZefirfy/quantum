@@ -378,7 +378,7 @@ footer .footer-layer a {
 }
 @media (hover: hover) {
   .mini-menu listMenuButton:hover {
-    background-color: var(--transparent-frame-color2);
+    background-color: var(--transparent-frame-color);
   }
 }
 .mini-menu listMenuBorder {
@@ -632,6 +632,9 @@ main {
 .level img {
   border-radius: var(--pxl1);
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .level .level-text-wrapper {
   word-break: break-word;
@@ -766,6 +769,10 @@ main {
 }
 .level-info-container .level-name {
   font-size: 2rem;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 .level-info-container .level-information-wrapper {
   width: 100%;
@@ -874,6 +881,11 @@ main {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+.victors-wrapper .victor .victor-text {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 .victors-wrapper .victor .victor-text button {
   outline: none;
@@ -1042,14 +1054,23 @@ main {
 }
 .player-complied-level img {
   border-radius: var(--pxl1);
-  height: 150px;
+  width: 30vw;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   cursor: pointer;
+  max-width: 250px;
 }
 .player-complied-level .complied-level-text {
   margin-left: var(--pxl2);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+@media (max-width: 778px) {
+  .player-complied-level .complied-level-text {
+    font-size: 1.6vw;
+  }
 }
 
 @keyframes player-level-bar-spawn-animation {

@@ -29,6 +29,7 @@
     img {
         border-radius: var(--pxl1);
         cursor: pointer;
+        user-select: none;
     }
 
     .level-text-wrapper {
