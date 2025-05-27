@@ -85,6 +85,8 @@ function addPlayerInfo(player,
         if (player.name == records[i].player) {
             points += calculateProgressScore(idsToPoints[records[i].id], records[i].percent)
 
+            concreteLevel = -1
+
             // searching
             concreteLevel = concreteLevel == -1 ? searchByLevelID(records[i].id, demonlist, type="level") : concreteLevel
             concreteLevel = concreteLevel == -1 ? searchByLevelID(records[i].id, challengelist, type="level") : concreteLevel

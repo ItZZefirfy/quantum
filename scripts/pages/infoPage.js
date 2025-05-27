@@ -23,6 +23,15 @@ function infoPage() {
     
     } else if (linkData.type == "player") {
         var player = searchPlayerByName(linkData.player, data.players)
+
+        if (player == -1) {
+            document.title = "игрок не найден"
+            document.getElementById("loading-wrapper").style.display = "none"
+            return
+        }
+
+        document.title = player.displayName
+
         addPlayerInfo(
             player, 
             data.progresses,
