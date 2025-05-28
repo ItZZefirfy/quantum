@@ -3,9 +3,62 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles/main.css">
         <title>Новости</title>
     </head>
     <body>
-        news
+        <header></header>
+        <div id="menu"></div>
+
+        <main>
+            <div id="news-wrapper">
+                <div class="news-post">
+                    some text
+                </div>
+
+                <div class="news-record">
+                    <div class="record-text">
+                        Игрок <button class="news-record-player-profile-button">
+                            <img src="data/icons/--default--.png" alt="player-icon">
+                            <div>Venom</div>
+                        </button> 
+                        проходит <button class="news-record-level-link-button">
+                           <div>Tartarus</div>
+                        </button>
+                    </div>
+                    <button class="news-record-video-button">
+                        <i class='bx  bx-play'></i>
+                        <div>Видео</div>
+                    </button>
+                </div>
+                <div class="news-record">
+                    <div class="record-text">
+                        Игрок <button class="news-record-player-profile-button">
+                            <img src="data/icons/--default--.png" alt="player-icon">
+                            <div>Venom</div>
+                        </button> 
+                        проходит <button class="news-record-level-link-button">
+                           <div>Tartarus</div>
+                        </button> на 89%
+                    </div>
+                    <button class="news-record-video-button">
+                        <i class='bx  bx-play'></i>
+                        <div>Видео</div>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer></footer>
+
+        <!-- scripts -->
+        <script src="scripts/maths.js"></script>
+        <script src="scripts/database.js"></script>
+        <script src="scripts/functions.js"></script>
+        <script src="scripts/elements/header.js"></script>
+        <script src="scripts/elements/footer.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/pages/newsPage.js"></script>
     </body>
 </html>

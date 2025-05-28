@@ -255,7 +255,7 @@
             "customPreview": false,
             "verification": false,
             "percent": 100,
-            "postID":2
+            "postID": 2
         },
 
         {
@@ -266,14 +266,19 @@
             "customPreview": false,
             "verification": false,
             "percent": 89,
-            "postID":3
+            "postID": 3
         }
     ],
 
     "news": [
         {
-            "postID":1,
+            "postID": 1,
             "content": "some text"
+        },
+
+        {
+            "postID": 4,
+            "content": "some text2"
         }
     ]
 }

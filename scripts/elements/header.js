@@ -167,7 +167,7 @@ function addMenus() {
     document.getElementById("mini-menu-challengelist-link").onclick = () => { openLink("challengelist.html") }
     document.getElementById("mini-menu-platformerlist-link").onclick = () => { openLink("platformerlist.html") }
 
-    document.getElementById("mini-menu-news-link").onclick = () => { openLink("") }
+    document.getElementById("mini-menu-news-link").onclick = () => { openLink("news.html") }
     document.getElementById("mini-menu-rules-discord-link").onclick = () => { openLink("https://github.com/ItZZefirfy/quantum/blob/main/data/rules-discord.md", "_blank") }
     document.getElementById("mini-menu-rules-gdps-link").onclick = () => { openLink("https://github.com/ItZZefirfy/quantum/blob/main/data/rules-gdps.md", "_blank") }
     document.getElementById("mini-menu-settings-link").onclick = () => { openLink("") }

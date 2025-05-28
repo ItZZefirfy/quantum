@@ -378,7 +378,7 @@ footer .footer-layer a {
 }
 @media (hover: hover) {
   .mini-menu listMenuButton:hover {
-    background-color: var(--transparent-frame-color);
+    background-color: var(--transparent-frame-color2);
   }
 }
 .mini-menu listMenuBorder {
@@ -1080,4 +1080,66 @@ main {
   100% {
     width: var(--player-level-progress);
   }
+}
+#news-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-post, .news-record {
+  background-color: var(--transparent-frame-color2);
+  width: 80vw;
+  max-width: 800px;
+  padding: var(--pxl2);
+  border-radius: var(--pxl2);
+  -webkit-backdrop-filter: blur(var(--pxl-1));
+          backdrop-filter: blur(var(--pxl-1));
+  margin: var(--pxl-1);
+}
+
+.news-record {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.news-record .record-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.news-record button {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  background: transparent;
+  font-weight: lighter;
+  transition: var(--transition);
+  padding: var(--pxl-1);
+  border-radius: var(--pxl-1);
+}
+.news-record button:hover {
+  background-color: var(--transparent-frame-color2);
+}
+
+.news-record-player-profile-button,
+.news-record-level-link-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.news-record-player-profile-button img,
+.news-record-level-link-button img {
+  height: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+.news-record-video-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
