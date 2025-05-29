@@ -1032,7 +1032,7 @@ main {
   --border-radius: 16px;
 }
 
-.player-complied-level {
+.player-completed-level {
   background-color: var(--transparent-frame-color2);
   border-radius: var(--pxl2);
   padding: var(--pxl2);
@@ -1048,11 +1048,11 @@ main {
   transition: var(--transition);
 }
 @media (hover: hover) {
-  .player-complied-level:hover {
+  .player-completed-level:hover {
     background-color: var(--transparent-frame-color);
   }
 }
-.player-complied-level img {
+.player-completed-level img {
   border-radius: var(--pxl1);
   width: 30vw;
   -webkit-user-select: none;
@@ -1061,14 +1061,14 @@ main {
   cursor: pointer;
   max-width: 250px;
 }
-.player-complied-level .complied-level-text {
+.player-completed-level .completed-level-text {
   margin-left: var(--pxl2);
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
 }
 @media (max-width: 778px) {
-  .player-complied-level .complied-level-text {
+  .player-completed-level .completed-level-text {
     font-size: 1.6vw;
   }
 }

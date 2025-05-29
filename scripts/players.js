@@ -28,8 +28,8 @@ function drawPlayer(name, displayName, icon, position, points) {
 function generatePlayers() {
     var players = JSON.parse(sessionStorage.data).players
     var records = JSON.parse(sessionStorage.data).progresses.reverse()
-    var compliedLevels = []
     var idsToPoints = JSON.parse(sessionStorage.idsToPoints)
+    var completedLevels = []
 
     var updatedPlayerList = []
     var concretePlayer
@@ -37,10 +37,11 @@ function generatePlayers() {
     for (let playerN = 0; playerN < players.length; playerN++) {
         concretePlayer = players[playerN]
         concretePlayer.points = 0
+        completedLevels = []
         for (let i = 0; i < records.length; i++) {
-            if (records[i].player == concretePlayer.name && compliedLevels.indexOf(records[i].id) == -1) {
+            if (records[i].player == concretePlayer.name && completedLevels.indexOf(records[i].id) == -1) {
                 concretePlayer.points += calculateProgressScore(idsToPoints[records[i].id], records[i].percent)
-                compliedLevels.push(records[i].id)
+                completedLevels.push(records[i].id)
             }
         }
         updatedPlayerList.push(concretePlayer)
@@ -77,11 +78,13 @@ function addPlayerInfo(player,
                        challengelist,
                        platformerlist) {
 
+    records = records.sort((a, b) => b.postID - a.postID)
     var points = 0
     var idsToPoints = JSON.parse(sessionStorage.idsToPoints)
     var playerLevels = ''
     var concreteLevel = -1
     var levelPreview = ''
+    var completedLevels = []
 
     for (let i = 0; i < records.length; i++) {
         if (player.name == records[i].player) {
@@ -93,6 +96,12 @@ function addPlayerInfo(player,
             concreteLevel = concreteLevel == -1 ? searchByLevelID(records[i].id, demonlist, type="level") : concreteLevel
             concreteLevel = concreteLevel == -1 ? searchByLevelID(records[i].id, challengelist, type="level") : concreteLevel
             concreteLevel = concreteLevel == -1 ? searchByLevelID(records[i].id, platformerlist, type="level") : concreteLevel
+
+            if (completedLevels.indexOf(records[i].id) != -1) {
+                continue
+            }
+
+            completedLevels.push(records[i].id)
 
             // calculating preview link
             if (concreteLevel.customPreview == false) {
@@ -108,9 +117,9 @@ function addPlayerInfo(player,
             }
 
             // saving player interface
-            playerLevels +=`<div class="player-complied-level" onclick="openLevelInfo(${concreteLevel.id})">
+            playerLevels +=`<div class="player-completed-level" onclick="openLevelInfo(${concreteLevel.id})">
                                 <img src="${levelPreview}" alt="level preview" onclick="openLink('${concreteLevel.videoLink}', target='_blank')">
-                                <div class="complied-level-text">
+                                <div class="completed-level-text">
                                     <h1>${concreteLevel.name} - ${records[i].percent}%</h1>
                                     <h3>${concreteLevel.creator}</h3>
                                 </div>
@@ -153,7 +162,7 @@ function addPlayerInfo(player,
                         </div>`
 
     const content = `${playerInfo}
-    <div class="player-complied-levels">${playerLevels}</div>`
+    <div class="player-completed-levels">${playerLevels}</div>`
  
     const contentWrapper = document.getElementById("content-wrapper")
     contentWrapper.innerHTML += content

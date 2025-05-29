@@ -369,7 +369,7 @@
     --border-radius: 16px;
 }
 
-.player-complied-level {
+.player-completed-level {
     background-color: var(--transparent-frame-color2);
     border-radius: var(--pxl2);
     padding: var(--pxl2);
@@ -401,7 +401,7 @@
         max-width: 250px;
     }
 
-    .complied-level-text {
+    .completed-level-text {
         margin-left: var(--pxl2);
         word-break: break-word;
         overflow-wrap: break-word;

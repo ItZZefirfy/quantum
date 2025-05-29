@@ -56,7 +56,7 @@ function addLevelInfo(level, records, players) {
     var levelPreview
 
     // sorting records
-    records.sort((a, b) => a.postID - b.postID)
+    records.sort((a, b) => b.postID - a.postID)
 
     if (level.customPreview == false) {
         if (level.previewFormat == false) {
@@ -92,11 +92,21 @@ function addLevelInfo(level, records, players) {
                     </div>
                 </div>`
     
-    var victors= ''
+    var victors = ''
     var victor = ''
     var victorIcon = ''
+    var player
+    var _players = []
+    var _levels = []
 
     for (let i = 0; i < records.length; i++) {
+        if (_players.indexOf(records[i].player) != -1 &&
+            _levels.indexOf(records[i].id) != -1) {
+            continue
+        }
+        _players.push(records[i].player)
+        _levels.push(records[i].id)
+
         if (records[i].id == level.id && !records[i].verification) {
 
             victor = searchPlayerByName(records[i].player, players)
@@ -109,11 +119,13 @@ function addLevelInfo(level, records, players) {
                 victorIcon = victor.icon
             }
 
+            player = searchPlayerByName(records[i].player, players)
+
             victors += `
                     <div class="victor" onclick="openPlayerInfo('${records[i].player}')">
                         <img src="${victorIcon}" alt="player icon">
                         <div class="victor-text">
-                            <h1>${records[i].player} - ${records[i].percent}%</h1>
+                            <h1>${player.displayName} - ${records[i].percent}%</h1>
                             <button onclick="openLink('${records[i].video}', '_blank')"><i class='bx  bx-play'></i>Видео</button>
                         </div>
                     </div>
