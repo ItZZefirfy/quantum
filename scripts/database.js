@@ -93,6 +93,9 @@ function updateData(updateRequired=false) {
             // saving data in sessionStorage
             sessionStorage.idsToPoints = JSON.stringify(idsToPoints)
             sessionStorage.data = data
+
+            // reload page
+            location.reload()
         })
     }
 }

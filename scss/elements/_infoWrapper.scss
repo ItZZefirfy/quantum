@@ -13,7 +13,7 @@ main {
     font-size: 1.5rem;
 
     background-color: var(--transparent-frame-color);
-    backdrop-filter: blur(var(--pxl-1));
+    backdrop-filter: blur(var(--blur));
     
     position: relative;
     overflow: hidden;
@@ -122,5 +122,57 @@ main {
                 color: var(--light-main-text-color);
             }
         }
+    }
+}
+
+.download-frame {
+    width: 80vw;
+    padding: var(--pxl2);
+    border-radius: var(--pxl2);
+    background: var(--transparent-frame-color2);
+
+    backdrop-filter: blur(var(--blur));
+
+    a:hover {
+        color: var(--other-text-color);
+    }
+
+    h1, h3 {
+        margin-top: var(--pxl2);
+        margin-bottom: var(--pxl-1);
+    }
+    .copy-frame {
+        padding: var(--pxl1);
+        border-radius: var(--pxl2);
+        user-select: none;
+        width: min-content;
+
+        background-color: var(--transparent-frame-color2);
+        letter-spacing: .1rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        transition: var(--transition);
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--transparent-frame-color);
+            }
+        }
+
+        &:active {
+            letter-spacing: .07rem;
+        }
+
+        i {
+            margin-right: var(--pxl-1);
+        }
+    }
+
+    .warning {
+        color: var(--other-text-color);        
     }
 }

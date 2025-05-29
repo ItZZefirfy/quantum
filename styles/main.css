@@ -7,6 +7,7 @@
   --pxl1: 12px;
   --pxl2: 16px;
   --pxl3: 24px;
+  --blur: 6px;
   --frame-color: #000;
   --transparent-frame-color: #000a;
   --transparent-frame-color2: #0005;
@@ -196,8 +197,8 @@ footer .footer-layer a {
   background-color: var(--transparent-frame-color);
   padding: var(--pxl2);
   border-radius: var(--pxl2);
-  -webkit-backdrop-filter: blur(var(--pxl-1));
-          backdrop-filter: blur(var(--pxl-1));
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   transition: var(--transition);
   margin: var(--pxl3);
   min-width: 250px;
@@ -263,7 +264,7 @@ footer .footer-layer a {
 @media (hover: hover) {
   .user-role:hover::before {
     opacity: 1;
-    filter: blur(var(--pxl1));
+    filter: blur(var(--blur));
     transition: var(--transition);
   }
 }
@@ -293,8 +294,8 @@ footer .footer-layer a {
   width: 100dvw;
   height: 100dvh;
   box-sizing: border-box;
-  -webkit-backdrop-filter: blur(var(--pxl-1));
-          backdrop-filter: blur(var(--pxl-1));
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   transition: var(--transition);
   padding: var(--pxl2);
   transform: translateX(-100vw);
@@ -510,8 +511,8 @@ main {
   border-radius: var(--pxl2);
   font-size: 1.5rem;
   background-color: var(--transparent-frame-color);
-  -webkit-backdrop-filter: blur(var(--pxl-1));
-          backdrop-filter: blur(var(--pxl-1));
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   position: relative;
   overflow: hidden;
 }
@@ -606,6 +607,52 @@ main {
   }
 }
 
+.download-frame {
+  width: 80vw;
+  padding: var(--pxl2);
+  border-radius: var(--pxl2);
+  background: var(--transparent-frame-color2);
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
+}
+.download-frame a:hover {
+  color: var(--other-text-color);
+}
+.download-frame h1, .download-frame h3 {
+  margin-top: var(--pxl2);
+  margin-bottom: var(--pxl-1);
+}
+.download-frame .copy-frame {
+  padding: var(--pxl1);
+  border-radius: var(--pxl2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: -moz-min-content;
+  width: min-content;
+  background-color: var(--transparent-frame-color2);
+  letter-spacing: 0.1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .download-frame .copy-frame:hover {
+    background-color: var(--transparent-frame-color);
+  }
+}
+.download-frame .copy-frame:active {
+  letter-spacing: 0.07rem;
+}
+.download-frame .copy-frame i {
+  margin-right: var(--pxl-1);
+}
+.download-frame .warning {
+  color: var(--other-text-color);
+}
+
 #levels-wrapper {
   display: flex;
   flex-direction: column;
@@ -682,8 +729,8 @@ main {
     padding-top: var(--pxl-1);
     background-color: var(--transparent-frame-color);
     border-bottom: var(--pxl1);
-    -webkit-backdrop-filter: blur(var(--pxl-1));
-            backdrop-filter: blur(var(--pxl-1));
+    -webkit-backdrop-filter: blur(var(--blur));
+            backdrop-filter: blur(var(--blur));
   }
 }
 
@@ -751,8 +798,8 @@ main {
   background-color: var(--transparent-frame-color2);
   padding: var(--pxl2);
   border-radius: var(--pxl2);
-  -webkit-backdrop-filter: blur(var(--pxl-1));
-          backdrop-filter: blur(var(--pxl-1));
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -858,8 +905,8 @@ main {
 .victors-wrapper .victor {
   width: 80vw;
   max-width: 800px;
-  -webkit-backdrop-filter: blur(var(--pxl-1));
-          backdrop-filter: blur(var(--pxl-1));
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   background-color: var(--transparent-frame-color2);
   padding: var(--pxl2);
   margin: var(--pxl-1);
@@ -908,8 +955,8 @@ main {
 .player-info-wrapper {
   width: 80vw;
   max-width: 800px;
-  -webkit-backdrop-filter: blur(var(--pxl-1));
-          backdrop-filter: blur(var(--pxl-1));
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   background-color: var(--transparent-frame-color2);
   display: flex;
   flex-direction: column;
@@ -1036,8 +1083,8 @@ main {
   background-color: var(--transparent-frame-color2);
   border-radius: var(--pxl2);
   padding: var(--pxl2);
-  -webkit-backdrop-filter: blur(var(--pxl-1));
-          backdrop-filter: blur(var(--pxl-1));
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   margin: var(--pxl2);
   display: flex;
   flex-direction: row;
@@ -1099,8 +1146,8 @@ main {
   max-width: 800px;
   padding: var(--pxl2);
   border-radius: var(--pxl2);
-  -webkit-backdrop-filter: blur(var(--pxl-1));
-          backdrop-filter: blur(var(--pxl-1));
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   margin: var(--pxl-1);
 }
 

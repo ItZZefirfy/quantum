@@ -88,8 +88,6 @@ function addPlayerInfo(player,
 
     for (let i = 0; i < records.length; i++) {
         if (player.name == records[i].player) {
-            points += calculateProgressScore(idsToPoints[records[i].id], records[i].percent)
-
             concreteLevel = -1
 
             // searching
@@ -102,6 +100,8 @@ function addPlayerInfo(player,
             }
 
             completedLevels.push(records[i].id)
+
+            points += calculateProgressScore(idsToPoints[records[i].id], records[i].percent)
 
             // calculating preview link
             if (concreteLevel.customPreview == false) {
