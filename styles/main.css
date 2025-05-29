@@ -290,7 +290,7 @@ footer .footer-layer a {
   top: 0;
   left: 0;
   background-color: var(--transparent-frame-color2);
-  width: 100vw;
+  width: 100dvw;
   height: 100dvh;
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(var(--pxl-1));
@@ -1087,6 +1087,11 @@ main {
   align-items: center;
   justify-content: center;
 }
+#news-wrapper img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 
 .news-post, .news-record {
   background-color: var(--transparent-frame-color2);
@@ -1107,6 +1112,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 .news-record button {
   border: none;
@@ -1120,6 +1126,12 @@ main {
 }
 .news-record button:hover {
   background-color: var(--transparent-frame-color2);
+}
+.news-record button div {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: start;
 }
 
 .news-record-player-profile-button,

@@ -27,7 +27,8 @@ function drawPlayer(name, displayName, icon, position, points) {
 
 function generatePlayers() {
     var players = JSON.parse(sessionStorage.data).players
-    var records = JSON.parse(sessionStorage.data).progresses
+    var records = JSON.parse(sessionStorage.data).progresses.reverse()
+    var compliedLevels = []
     var idsToPoints = JSON.parse(sessionStorage.idsToPoints)
 
     var updatedPlayerList = []
@@ -37,8 +38,9 @@ function generatePlayers() {
         concretePlayer = players[playerN]
         concretePlayer.points = 0
         for (let i = 0; i < records.length; i++) {
-            if (records[i].player == concretePlayer.name) {
+            if (records[i].player == concretePlayer.name && compliedLevels.indexOf(records[i].id) == -1) {
                 concretePlayer.points += calculateProgressScore(idsToPoints[records[i].id], records[i].percent)
+                compliedLevels.push(records[i].id)
             }
         }
         updatedPlayerList.push(concretePlayer)

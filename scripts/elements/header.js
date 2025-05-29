@@ -31,6 +31,10 @@ function addMenu() {
             <a href="players.html"><h2>Игроки</h2></a>
         </div>
 
+        <div class="menu-link-wrapper">
+            <a href="news.html"><h2>Новости</h2></a>
+        </div>
+
         <button id="close-menu-button"><h3>Назад</h3></button>
     `
     
