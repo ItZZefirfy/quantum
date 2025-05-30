@@ -85,7 +85,7 @@ function addLevelInfo(level, records, players) {
                         <div class="level-information level-information-copy"
                             onclick="navigator.clipboard.writeText('${level.creator}')">АВТОР: ${level.creator}</div>
                         <div class="level-information level-information-copy"
-                            onclick="navigator.clipboard.writeText('${level.verifier}')">ВЕРИФИКАТОР: ${level.verifier}</div>
+                            onclick="navigator.clipboard.writeText('${level.verifier}')">ВЕРИФЕР: ${level.verifier}</div>
                         <div class="level-information level-information-copy"
                             onclick="navigator.clipboard.writeText('${level.id}')">ID УРОВНЯ: ${level.id}</div>
                         <button id="show-full-creators-list-button">Полный список креаторов</button>
