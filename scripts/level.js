@@ -1,9 +1,15 @@
 function drawLevel(levelName, author, previewLink, videoLink, position, levelID) {
     let levelsWrapper = document.getElementById("levels-wrapper")
 
+    let onclick = ''
+
+    if (videoLink != false) {
+        onclick = `onclick="openLink('${videoLink}', '_blank')"`
+    }
+
     let level = `<div class="level" onclick="openLevelInfo(${levelID})">
                     <img src="${previewLink}" alt="level preview" class="level-element" 
-                        onclick="openLink('${videoLink}', '_blank')">
+                        ${onclick}>
                     <div class="level-text-wrapper level-element">
                         <h1 class="level-main-text"><span class="level-name-secondary-text"> #${position} </span>${levelName}</h1>
                         <h3 class="level-secondary-text">by ${author}</h3>
@@ -76,9 +82,15 @@ function addLevelInfo(level, records, players) {
         levelLength = level.info.length[0] + 'мин ' + level.info.length[1] + 'с'
     }
     
+    var onclick = ''
+
+    if (level.videoLink != false) {
+        onclick = `onclick="openLink('${level.videoLink}', '_blank')"`
+    }
+
     const levelInfoContent = `<div class="level-info-container">
                     <div class="level-name">${level.name}</div>
-                    <img src="${levelPreview}" alt="level preview" onclick="openLink('${level.videoLink}', '_blank')">
+                    <img src="${levelPreview}" alt="level preview" ${onclick}>
                     <div class="level-information-wrapper">
                         <div class="level-information level-information-copy"
                             onclick="navigator.clipboard.writeText('${levelLength}')">ДЛИНА: ${levelLength}</div>

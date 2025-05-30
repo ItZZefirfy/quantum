@@ -1,87 +1,139 @@
 {
     "players": [
         {
-            "displayName": "Zefurka",
-            "name":"zefirfy",
-            "icon": false
+            "displayName": "SteanDen",
+            "name": "SteanDen",
+            "icon": true
         },
 
         {
-            "displayName": "Dogorix",
-            "name":"artembird",
+            "displayName": "Better",
+            "name": "better",
+            "icon": true
+        },
+
+        {
+            "displayName": "dizya1",
+            "name": "dizya1",
+            "icon": true
+        },
+
+        {
+            "displayName": "KopelaSoula",
+            "name": "KopelaSoula",
             "icon": false
         }
     ],
 
     "demonlist": [
         {
-            "name": "Tartarus",
-            "verifier": "Zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 1,
+            "name": "kapeka",
+            "verifier": "dizya1",
+            "creator": "dizya1",
+            "videoLink": false,
+            "id": 118,
             "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
+            "customPreview": "images/--default-preview--.png",
             "info": {
-                "length": [1, 28],
+                "length": [0, 29],
                 "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
+                    "dizya1"
+                ]
+            }
+        }, 
+        
+        {
+            "name": "Redshift",
+            "verifier": "better",
+            "creator": "Better",
+            "videoLink": "https://youtu.be/GqEtCldYJKc?si=pn3S8OzfQTzXhT1u",
+            "id": 124,
+            "previewFormat": false,
+            "customPreview": false,
+            "info": {
+                "length": [0, 31],
+                "creators": [
+                    "Better"
+                ]
+            }
+        }, 
+
+        {
+            "name": "Low Scapes Demon",
+            "verifier": "SteanDen",
+            "creator": "SteanDen",
+            "videoLink": "https://youtu.be/uv_tTAtUy8M?si=F6nFhMbHWBNh_SA1",
+            "id": 120,
+            "previewFormat": false,
+            "customPreview": false,
+            "info": {
+                "length": [0, 35],
+                "creators": [
+                    "SteanDen"
                 ]
             }
         },
 
         {
-            "name": "Tartarus",
-            "verifier": "Zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 2,
+            "name": "Low Insane Demon",
+            "verifier": "SteanDen",
+            "creator": "SteanDen",
+            "videoLink": "https://youtu.be/cxBifKE4crI?si=iVwtddYVCZUTcXPr",
+            "id": 101,
             "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
+            "customPreview": false,
             "info": {
-                "length": [1, 28],
+                "length": [0, 32],
                 "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
+                    "SteanDen"
                 ]
             }
-        }, 
+        },
 
         {
-            "name": "Tartarus",
-            "verifier": "Zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 3,
+            "name": "Cosmic Phantasm",
+            "verifier": "SteanDen",
+            "creator": "SteanDen",
+            "videoLink": "https://youtu.be/Uorwni1YCvc?si=mmwV-k18Qo90PaGM",
+            "id": 123,
             "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
+            "customPreview": false,
             "info": {
-                "length": [1, 28],
+                "length": [0, 37],
                 "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
+                    "SteanDen"
                 ]
             }
-        }, 
+        },
 
         {
-            "name": "Tartarus",
-            "verifier": "Zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 4,
+            "name": "Clownshaker",
+            "verifier": "SteanDen",
+            "creator": "SteanDen",
+            "videoLink": "https://youtu.be/SMIDvsyupNo?si=WvXAhhsvhVcLoUjz",
+            "id": 121,
             "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
+            "customPreview": false,
             "info": {
-                "length": [1, 28],
+                "length": [0, 43],
                 "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
+                    "SteanDen"
+                ]
+            }
+        },
+
+        {
+            "name": "Butterfly",
+            "verifier": "SteanDen",
+            "creator": "SteanDen",
+            "videoLink": false,
+            "id": 126,
+            "previewFormat": false,
+            "customPreview": false,
+            "info": {
+                "length": [0, 51],
+                "creators": [
+                    "SteanDen"
                 ]
             }
         }
@@ -89,168 +141,84 @@
 
     "challengelist": [
         {
-            "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
-            "verifier": "Zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 5,
+            "name": "ebloid",
+            "verifier": "KopelaSoula",
+            "creator": "KopelaSoula",
+            "videoLink": "https://youtu.be/fnKUvkz9Xh8?si=mH7uk82NJ1ihJnar",
+            "id": 102,
             "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
+            "customPreview": false,
             "info": {
-                "length": [1, 28],
+                "length": [0, 11],
                 "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
+                    "Zefirfy",
+                    "KopelaSoula"
                 ]
             }
         },
 
         {
-            "name": "Tartarus",
-            "verifier": "Zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 6,
+            "name": "PiPiPiPiPi",
+            "verifier": "dizya1",
+            "creator": "dizya1",
+            "videoLink": false,
+            "id": 119,
             "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
+            "customPreview": "images/--default-preview--.png",
             "info": {
-                "length": [1, 28],
+                "length": [0, 16],
                 "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
-                ]
-            }
-        }, 
-
-        {
-            "name": "Tartarus",
-            "verifier": "Zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 7,
-            "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
-            "info": {
-                "length": [1, 28],
-                "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
-                ]
-            }
-        }, 
-
-        {
-            "name": "i need gays",
-            "verifier": "nigger",
-            "creator": "nigger",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 8,
-            "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
-            "info": {
-                "length": [1, 28],
-                "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
-                ]
-            }
-        }
-    ],
-
-    "platformerlist": [
-        {
-            "name": "Tartarus",
-            "verifier": "zefirfy",
-            "creator": "Venom",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 9,
-            "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
-            "info": {
-                "length": [1, 28],
-                "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
+                    "dizya1"
                 ]
             }
         },
 
         {
-            "name": "Tartarus",
-            "verifier": "zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 10,
+            "name": "The Lomamov Limit",
+            "verifier": "KopelaSoula",
+            "creator": "KopelaSoula",
+            "videoLink": "https://youtu.be/mSh2ztZI1ZU?si=bRq2cptzMm8NYu0c",
+            "id": 105,
             "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
+            "customPreview": false,
             "info": {
-                "length": [1, 28],
+                "length": [0, 11],
                 "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
-                ]
-            }
-        }, 
-
-        {
-            "name": "Tartarus",
-            "verifier": "zefirfy",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 11,
-            "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
-            "info": {
-                "length": [1, 28],
-                "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
-                ]
-            }
-        }, 
-
-        {
-            "name": "vsc",
-            "verifier": "venom",
-            "creator": "Artembird",
-            "videoLink": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "id": 12,
-            "previewFormat": false,
-            "customPreview": "data/previews/testing.png",
-            "info": {
-                "length": [1, 28],
-                "creators": [
-                    "Artembird",
-                    "Venom",
-                    "nigger"
+                    "KopelaSoula"
                 ]
             }
         }
     ],
+
+    "platformerlist": [],
 
     "progresses": [
         {
-            "id": 1,
-            "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "player": "zefirfy",
+            "id": 101,
+            "video": "https://youtu.be/cxBifKE4crI?si=iVwtddYVCZUTcXPr",
+            "player": "SteanDen",
             "previewFormat": false,
             "customPreview": false,
-            "verification": false,
+            "verification": true,
             "percent": 100,
-            "postID":0
+            "postID": 0
         },
 
         {
-            "id": 5,
-            "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "player": "artembird",
+            "id": 102,
+            "video": "https://youtu.be/fnKUvkz9Xh8?si=mH7uk82NJ1ihJnar",
+            "player": "KopelaSoula",
+            "previewFormat": false,
+            "customPreview": false,
+            "verification": true,
+            "percent": 100,
+            "postID": 1
+        },
+
+        {
+            "id": 105,
+            "video": "https://youtu.be/mSh2ztZI1ZU?si=bRq2cptzMm8NYu0c",
+            "player": "KopelaSoula",
             "previewFormat": false,
             "customPreview": false,
             "verification": true,
@@ -259,48 +227,87 @@
         },
 
         {
-            "id": 9,
-            "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "player": "artembird",
+            "id": 118,
+            "video": "",
+            "player": "dizya1",
             "previewFormat": false,
             "customPreview": false,
-            "verification": false,
-            "percent": 89,
+            "verification": true,
+            "percent": 100,
             "postID": 3
         },
 
         {
-            "id": 9,
-            "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "player": "artembird",
+            "id": 119,
+            "video": "",
+            "player": "dizya1",
             "previewFormat": false,
             "customPreview": false,
-            "verification": false,
+            "verification": true,
+            "percent": 100,
+            "postID": 4
+        },
+
+        {
+            "id": 120,
+            "video": "https://youtu.be/uv_tTAtUy8M?si=F6nFhMbHWBNh_SA1",
+            "player": "SteanDen",
+            "previewFormat": false,
+            "customPreview": false,
+            "verification": true,
             "percent": 100,
             "postID": 5
         },
 
         {
-            "id": 9,
-            "video": "https://youtu.be/cmtreaMFf8M?si=G79GoNjdnxnkD2_N",
-            "player": "zefirfy",
+            "id": 121,
+            "video": "https://youtu.be/SMIDvsyupNo?si=WvXAhhsvhVcLoUjz",
+            "player": "SteanDen",
             "previewFormat": false,
             "customPreview": false,
-            "verification": false,
+            "verification": true,
             "percent": 100,
-            "postID": 6
+            "postID": 7
+        },
+
+        {
+            "id": 123,
+            "video": "https://youtu.be/Uorwni1YCvc?si=mmwV-k18Qo90PaGM",
+            "player": "SteanDen",
+            "previewFormat": false,
+            "customPreview": false,
+            "verification": true,
+            "percent": 100,
+            "postID": 8
+        },
+
+        {
+            "id": 124,
+            "video": "https://youtu.be/GqEtCldYJKc?si=pn3S8OzfQTzXhT1u",
+            "player": "better",
+            "previewFormat": false,
+            "customPreview": false,
+            "verification": true,
+            "percent": 100,
+            "postID": 9
+        },
+
+        {
+            "id": 126,
+            "video": "",
+            "player": "SteanDen",
+            "previewFormat": false,
+            "customPreview": false,
+            "verification": true,
+            "percent": 100,
+            "postID": 10
         }
     ],
 
     "news": [
         {
-            "postID": 1,
-            "content": "some text"
-        },
-
-        {
-            "postID": 4,
-            "content": "some text2"
+            "postID": -1,
+            "content": "<h1>Создание Quantum GDPS</h1>"
         }
     ]
 }

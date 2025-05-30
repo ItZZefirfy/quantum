@@ -35,7 +35,7 @@ function drawNews(filter="none") {
 
             if (player.icon == false) {
                 playerIcon = links.dataPath + links.iconsFolder + "--default--.png"
-            } else if (icon == true) {
+            } else if (player.icon == true) {
                 playerIcon = links.dataPath + links.iconsFolder 
                         + player.name + defaultFormats.playerIcon
             } else {
