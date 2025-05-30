@@ -1,6 +1,6 @@
 # Quantum GDPS
-<a href="https://itzzefirfy.github.io/quantum/">Сайт</a>
-<a href="https://discord.gg/vX87VFVphg">Discord</a>
+- <a href="https://itzzefirfy.github.io/quantum/">Сайт</a>
+- <a href="https://discord.gg/vX87VFVphg">Discord</a>
 
 ### Строки кода
 css  29.6%  // 1.6k
