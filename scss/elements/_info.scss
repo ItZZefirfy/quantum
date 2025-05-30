@@ -51,6 +51,8 @@
 
         margin-top: var(--pxl2);
         margin-bottom: var(--pxl2);
+
+        cursor: pointer;
     }
 
     .level-name {
@@ -92,6 +94,8 @@
             position: relative;
 
             font-size: 1.1rem;
+
+            display: none;
 
             &:hover {
                 background: var(--transparent-frame-color2);

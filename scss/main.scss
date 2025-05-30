@@ -138,6 +138,40 @@ footer {
     }
 }
 
+.reload-bd-button {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    border-radius: 40px;
+
+    outline: none;
+    border: none;
+
+    background-color: var(--frame-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    margin: var(--pxl2);
+
+    transition: var(--transition);
+    i {
+        transition: var(--transition);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            transform: rotate(180deg);
+            background-color: var(--light-other-text-color)
+        }
+    }
+}
+
 @import 'elements/authors';
 @import 'elements/menu';
 @import 'elements/socialMedia';
@@ -145,5 +179,5 @@ footer {
 @import 'elements/level';
 @import 'elements/player';
 @import 'elements/info';
-@import 'elements/notifications';
+@import 'elements/settings';
 @import 'elements/news';

@@ -1,0 +1,47 @@
+.settings-wrapper {
+    background-color: var(--transparent-frame-color2);
+    padding: var(--pxl2);
+    border-radius: var(--pxl2);
+    width: 80vw;
+    max-width: 800px;
+
+    backdrop-filter: blur(var(--blur));
+
+    .option {
+        padding: var(--pxl-1) var(--pxl2);
+        border-radius: var(--pxl-1);
+        background-color: var(--transparent-frame-color2);
+        width: max-content;
+        user-select: none;
+
+        transition: var(--transition4);
+
+        @media (hover: hover) {
+            &:hover {
+                color: var(--other-text-color);
+            }
+        }
+
+        .information-text {
+            color: var(--other-text-color);
+            transition: var(--transition4);
+        }
+    }
+}
+
+#save-settings {
+    margin-top: var(--pxl2);
+    padding: var(--pxl1);
+    border-radius: var(--pxl1);
+    border: none;
+    outline: none;
+    background: var(--transparent-frame-color2);
+    transition: var(--transition4);
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--other-text-color);
+            background: var(--transparent-frame-color);
+        }
+    }
+}

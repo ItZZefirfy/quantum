@@ -67,10 +67,10 @@ function addMenus() {
         <listMenuButton id="mini-menu-settings-link">Настройки</listMenuButton>
         <listMenuBorder></listMenuBorder>
         <listMenuButton id="mini-menu-rules-discord-link">Правила дискорд сервера</listMenuButton>
-        <listMenuButton id="mini-menu-rules-gdps-link">Правила приватного сервера</listMenuButton>
-        <listMenuBorder></listMenuBorder>
+        <listMenuButton id="mini-menu-rules-gdps-link">Правила приватного сервера</listMenuButton>`
+        /*<listMenuBorder></listMenuBorder>
         <listMenuButton id="mini-menu-send-progress">Отправить прохождение</listMenuButton>
-    `
+    `*/
     
     body.innerHTML += menus    
     
@@ -175,5 +175,5 @@ function addMenus() {
     document.getElementById("mini-menu-rules-discord-link").onclick = () => { openLink("https://github.com/ItZZefirfy/quantum/blob/main/data/rules-discord.md", "_blank") }
     document.getElementById("mini-menu-rules-gdps-link").onclick = () => { openLink("https://github.com/ItZZefirfy/quantum/blob/main/data/rules-gdps.md", "_blank") }
     document.getElementById("mini-menu-settings-link").onclick = () => { openLink("settings.html") }
-    document.getElementById("mini-menu-send-progress").onclick = () => { openLink("") }
+    /*document.getElementById("mini-menu-send-progress").onclick = () => { openLink("") }*/
 }

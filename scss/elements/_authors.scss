@@ -60,6 +60,7 @@
 .user-roles-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .user-role {
@@ -126,4 +127,13 @@
 
 .role-administrator {
     --background: linear-gradient(120deg, #e89e61, #df4ed3, #d93a3a);
+}
+
+
+#user-zefirfy {
+    img {
+        width: 75px;
+        height: fit-content;
+        transform: translateY(10px);
+    }
 }

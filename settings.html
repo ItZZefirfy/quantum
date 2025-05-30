@@ -3,9 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="styles/main.css">
         <title>Настройки</title>
     </head>
     <body>
-        settings
+        <header></header>
+        <div id="menu"></div>
+
+        <main>
+            <div class="settings-wrapper">
+                <div class="option" id="option-enable-blur">
+                    <span class="information-text" id="option-enable-blur-status">[выкл]</span>
+                    Эффекты размытия
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+
+        <!-- scripts -->
+        <script src="scripts/maths.js"></script>
+        <script src="scripts/database.js"></script>
+        <script src="scripts/functions.js"></script>
+        <script src="scripts/elements/header.js"></script>
+        <script src="scripts/elements/footer.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/pages/settingsPage.js"></script>
     </body>
 </html>

@@ -1,3 +1,6 @@
+initSettings()
+settingsEffect()
+addUpdateButton()
 addHeader()
 addFooter()
 updateData()
