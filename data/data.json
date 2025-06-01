@@ -30,10 +30,10 @@
             "name": "kapeka",
             "verifier": "dizya1",
             "creator": "dizya1",
-            "videoLink": false,
+            "videoLink": "https://www.youtube.com/watch?v=h_WbCOONyCI",
             "id": 118,
-            "previewFormat": false,
-            "customPreview": "images/--default-preview--.png",
+            "previewFormat": ".jpg",
+            "customPreview": false,
             "info": {
                 "length": [0, 29],
                 "creators": [
@@ -161,10 +161,10 @@
             "name": "PiPiPiPiPi",
             "verifier": "dizya1",
             "creator": "dizya1",
-            "videoLink": false,
+            "videoLink": "https://www.youtube.com/watch?v=g--Xp9iEKag",
             "id": 119,
             "previewFormat": false,
-            "customPreview": "images/--default-preview--.png",
+            "customPreview": false,
             "info": {
                 "length": [0, 16],
                 "creators": [
