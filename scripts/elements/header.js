@@ -45,7 +45,7 @@ function addMenu() {
     }
 
     document.getElementById("close-menu-button").onclick = () => {
-        menu.style.transform = "translateX(-100vw)"
+        menu.style.transform = "translateX(-100%)"
     }
 }   
 

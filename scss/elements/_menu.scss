@@ -6,8 +6,8 @@
 
     background-color: var(--transparent-frame-color2);
 
-    width: 100dvw;
-    height: 100dvh;
+    width: max-content;
+    height: 100vh;
 
     box-sizing: border-box;
 
@@ -17,7 +17,7 @@
 
     padding: var(--pxl2);
 
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
 
     .menu-link-wrapper {
         margin-top: var(--pxl-1);

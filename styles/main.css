@@ -365,14 +365,15 @@ footer .footer-layer a {
   top: 0;
   left: 0;
   background-color: var(--transparent-frame-color2);
-  width: 100dvw;
-  height: 100dvh;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100vh;
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(var(--blur));
           backdrop-filter: blur(var(--blur));
   transition: var(--transition);
   padding: var(--pxl2);
-  transform: translateX(-100vw);
+  transform: translateX(-100%);
 }
 #menu .menu-link-wrapper {
   margin-top: var(--pxl-1);
