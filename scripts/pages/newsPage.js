@@ -18,6 +18,7 @@ function drawNews(filter="none") {
     var level
     var player
     var playerIcon
+    var videoButton
 
     for (let i = 0; i < content.length; i++) {
         if (content[i].content != undefined) {
@@ -42,6 +43,17 @@ function drawNews(filter="none") {
                 playerIcon = player.icon
             }
 
+            if (content[i].video != false) {
+                videoButton = `
+                    <button class="news-record-video-button" onclick="openLink('${content[i].video}', '_blank')">
+                        <i class='bx  bx-play'></i>
+                        <div>Видео</div>
+                    </button>
+                `
+            } else {
+                videoButton = ''
+            }
+
 
             if (content[i].verification) {
                 uiContent += `
@@ -55,10 +67,7 @@ function drawNews(filter="none") {
                                <div>${level.name}</div>
                             </button>
                         </div>
-                        <button class="news-record-video-button" onclick="openLink('${content[i].video}', '_blank')">
-                            <i class='bx  bx-play'></i>
-                            <div>Видео</div>
-                        </button>
+                        ${videoButton}
                     </div>
                 `
             } else if (content[i].percent == 100) {
@@ -73,10 +82,7 @@ function drawNews(filter="none") {
                             <div>${level.name}</div>
                             </button>
                         </div>
-                        <button class="news-record-video-button" onclick="openLink('${content[i].video}', '_blank')">
-                            <i class='bx  bx-play'></i>
-                            <div>Видео</div>
-                        </button>
+                        ${videoButton}
                     </div>
                 `
             } else {
@@ -91,10 +97,7 @@ function drawNews(filter="none") {
                             <div>${level.name}</div>
                             </button> на ${content[i].percent}%
                         </div>
-                        <button class="news-record-video-button" onclick="openLink('${content[i].video}', '_blank')">
-                            <i class='bx  bx-play'></i>
-                            <div>Видео</div>
-                        </button>
+                        ${videoButton}
                     </div>
                 `
             }

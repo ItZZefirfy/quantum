@@ -16,7 +16,7 @@ function addUpdateButton() {
     const updateDataButton = `
         <button class="reload-bd-button" 
             onclick="updateData(true)">
-            <i class='bx bx-refresh bx-flip-horizontal'></i>
+            <div><i class='bx bx-refresh bx-flip-horizontal'></i></div>
         </button>
     `
     document.body.innerHTML += updateDataButton

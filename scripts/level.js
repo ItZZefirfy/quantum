@@ -1,15 +1,19 @@
 function drawLevel(levelName, author, previewLink, videoLink, position, levelID) {
     let levelsWrapper = document.getElementById("levels-wrapper")
 
-    let onclick = ''
+    let preview = `<img src="${previewLink}" alt="level preview" class="level-element">`
 
     if (videoLink != false) {
-        onclick = `onclick="openLink('${videoLink}', '_blank')"`
+        preview = ` <div class="level-preview-wrapper" onclick="openLink('${videoLink}', '_blank')">
+                        <div class="level-preview-hover-effect">
+                            <i class='bx  bx-play'></i>
+                        </div>
+                        <img src="${previewLink}" alt="level preview" class="level-element">
+                    </div>`
     }
 
     let level = `<div class="level" onclick="openLevelInfo(${levelID})">
-                    <img src="${previewLink}" alt="level preview" class="level-element" 
-                        ${onclick}>
+                    ${preview}
                     <div class="level-text-wrapper level-element">
                         <h1 class="level-main-text"><span class="level-name-secondary-text"> #${position} </span>${levelName}</h1>
                         <h3 class="level-secondary-text">by ${author}</h3>

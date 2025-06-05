@@ -30,7 +30,19 @@ function infoPage() {
             return
         }
 
+        var iconLink
+
+        if (player.icon == false) {
+            iconLink = links.dataPath + links.iconsFolder + "--default--.png"
+        } else if (player.icon == true) {
+            iconLink = links.dataPath + links.iconsFolder 
+                    + player.name + defaultFormats.playerIcon
+        } else {
+            iconLink = player.icon
+        }
+
         document.title = player.displayName
+        document.getElementsByTagName("link")[0].href = iconLink
 
         addPlayerInfo(
             player, 

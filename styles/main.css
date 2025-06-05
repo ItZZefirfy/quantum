@@ -8,6 +8,7 @@
   --pxl2: 16px;
   --pxl3: 24px;
   --blur: 6px;
+  --blur2: 1px;
   --frame-color: #000;
   --transparent-frame-color: #000a;
   --transparent-frame-color2: #0005;
@@ -50,6 +51,12 @@
   color: var(--main-text-color);
 }
 
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 ::-moz-selection {
   background-color: var(--light-frame-color);
   color: var(--light-main-text-color);
@@ -67,8 +74,9 @@ body {
   background-attachment: fixed;
 }
 
-header, main, footer {
-  padding: var(--pxl2);
+header {
+  margin-top: var(--pxl2);
+  margin-bottom: var(--pxl2);
 }
 
 header {
@@ -199,13 +207,43 @@ footer .footer-layer a {
   margin: var(--pxl2);
   transition: var(--transition);
 }
-.reload-bd-button i {
+.reload-bd-button div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reload-bd-button * {
   transition: var(--transition);
+}
+.reload-bd-button::after {
+  content: "Перезагрузить";
+  position: absolute;
+  z-index: 1;
+  font-size: 20px;
+  background-color: var(--frame-color);
+  padding: var(--pxl-1);
+  border-radius: var(--pxl1);
+  transform: translateX(-60%) scale(90%);
+  opacity: 0;
+  transition: var(--transition);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media (hover: hover) {
   .reload-bd-button:hover {
-    transform: rotate(180deg);
     background-color: var(--light-other-text-color);
+  }
+  .reload-bd-button:hover div {
+    transform: rotate(180deg);
+  }
+  .reload-bd-button:hover::after {
+    transform: translateX(-80%) scale(100%);
+    background-color: var(--light-other-text-color);
+    opacity: 1;
   }
 }
 
@@ -542,6 +580,7 @@ main {
 
 .info-wrapper {
   width: 80vw;
+  max-width: 800px;
   padding: var(--pxl2);
   border: 1px solid var(--main-text-color);
   border-radius: var(--pxl2);
@@ -645,6 +684,7 @@ main {
 
 .download-frame {
   width: 80vw;
+  max-width: 800px;
   padding: var(--pxl2);
   border-radius: var(--pxl2);
   background: var(--transparent-frame-color2);
@@ -698,19 +738,18 @@ main {
 }
 
 .level {
-  background-color: var(--frame-color);
+  background-color: var(--transparent-frame-color2);
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   display: flex;
   position: relative;
   padding: var(--pxl2);
   margin-bottom: var(--pxl2);
   border-radius: var(--pxl2);
+  position: relative;
   width: 80vw;
+  max-width: 800px;
   transition: var(--transition);
-}
-@media (hover: hover) {
-  .level:hover {
-    box-shadow: 0 0 var(--pxl1) var(--light-main-text-color);
-  }
 }
 .level img {
   border-radius: var(--pxl1);
@@ -718,6 +757,7 @@ main {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  height: 160px;
 }
 .level .level-text-wrapper {
   word-break: break-word;
@@ -728,19 +768,22 @@ main {
   color: var(--main-text-color);
 }
 .level .level-secondary-text {
-  color: var(--secondary-text-color);
+  color: var(--other-text-color);
   font-weight: normal;
 }
 .level .level-name-secondary-text {
   color: var(--other-text-color);
   font-weight: normal;
 }
-@media (min-width: 960px) {
-  .level .level-element {
-    margin-right: var(--pxl2);
+@media (min-width: 960px) and (hover: hover) {
+  .level:hover {
+    background-color: var(--transparent-frame-color);
+    transform: scale(103%);
   }
-  .level img {
-    max-width: 240px;
+}
+@media (min-width: 960px) {
+  .level .level-text-wrapper {
+    margin-left: var(--pxl2);
   }
 }
 @media (max-width: 961px) {
@@ -748,11 +791,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--frame-color);
   }
-  .level .level-element {
+  .level .level-text-wrapper {
     margin-right: 0;
   }
   .level img {
+    width: 100%;
+    height: auto;
+  }
+  .level .level-preview-wrapper {
     width: 100%;
   }
   .level .level-text-wrapper {
@@ -770,8 +818,47 @@ main {
   }
 }
 
+.level-preview-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--pxl1);
+  display: flex;
+  cursor: pointer;
+}
+
+.level-preview-hover-effect {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(to top, var(--transparent-frame-color), var(--transparent-frame-color2));
+  -webkit-backdrop-filter: blur(var(--blur2));
+          backdrop-filter: blur(var(--blur2));
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--transition);
+}
+.level-preview-hover-effect i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: var(--pxl3);
+  border: 2px solid white;
+  border-radius: var(--pxl3);
+  padding: var(--pxl-1);
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .level-preview-hover-effect:hover {
+    opacity: 1;
+  }
+}
+
 .player {
-  background-color: var(--frame-color);
+  background-color: var(--transparent-frame-color2);
+  -webkit-backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -780,11 +867,13 @@ main {
   margin: var(--pxl2);
   border-radius: var(--pxl2);
   width: 80vw;
+  max-width: 800px;
   transition: var(--transition);
 }
 @media (hover: hover) {
   .player:hover {
-    box-shadow: 0 0 var(--pxl1) var(--light-main-text-color);
+    background-color: var(--transparent-frame-color);
+    transform: scale(103%);
   }
 }
 .player img {
@@ -793,11 +882,8 @@ main {
      -moz-user-select: none;
           user-select: none;
 }
-.player h1 > span {
+.player h3, .player h1 > span {
   color: var(--other-text-color);
-}
-.player h3 {
-  color: var(--secondary-text-color);
 }
 
 #loading-wrapper {

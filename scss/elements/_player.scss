@@ -1,5 +1,6 @@
 .player {
-    background-color: var(--frame-color);
+    background-color: var(--transparent-frame-color2);
+    backdrop-filter: blur(var(--blur));
 
     display: flex;
     flex-direction: row;
@@ -12,12 +13,14 @@
     border-radius: var(--pxl2);
 
     width: 80vw;
+    max-width: 800px;
 
     transition: var(--transition);
 
     @media (hover: hover) {
         &:hover {
-            box-shadow: 0 0 var(--pxl1) var(--light-main-text-color);
+            background-color: var(--transparent-frame-color);
+            transform: scale(103%);
         }
     }
 
@@ -26,11 +29,7 @@
         user-select: none;
     }
 
-    h1 > span {
+    h3, h1 > span {
         color: var(--other-text-color);
-    }
-
-    h3 {
-        color: var(--secondary-text-color);
     }
 }

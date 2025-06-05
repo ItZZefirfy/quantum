@@ -10,7 +10,9 @@
     --pxl1: 12px;
     --pxl2: 16px;
     --pxl3: 24px;
+
     --blur: 6px;
+    --blur2: 1px;
 
     // colors (dark)
     --frame-color: #000;
@@ -60,6 +62,10 @@
     margin: 0;
     font-family: var(--font-family);  
     color: var(--main-text-color); 
+}
+
+img {
+    user-select: none;
 }
 
 ::selection {
