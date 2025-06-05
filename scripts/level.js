@@ -1,3 +1,5 @@
+const { jsx } = require("react/jsx-runtime")
+
 function drawLevel(levelName, author, previewLink, videoLink, position, levelID) {
     let levelsWrapper = document.getElementById("levels-wrapper")
 
@@ -62,8 +64,11 @@ function generateLevels(type) {
 }
 
 function addLevelInfo(level, records, players) {
+    var idsToPoints = JSON.parse(sessionStorage.idsToPoints)
     var levelLength
     var levelPreview
+    var maxLevelPoints = idsToPoints[level.id]
+    
 
     // sorting records
     records.sort((a, b) => b.postID - a.postID)
@@ -104,6 +109,8 @@ function addLevelInfo(level, records, players) {
                             onclick="navigator.clipboard.writeText('${level.verifier}')">ВЕРИФЕР: ${level.verifier}</div>
                         <div class="level-information level-information-copy"
                             onclick="navigator.clipboard.writeText('${level.id}')">ID УРОВНЯ: ${level.id}</div>
+                        <div class="level-information level-information-copy"
+                            onclick="navigator.clipboard.writeText('${maxLevelPoints}')">ОЧКИ ЗА УРОВЕНЬ: ${maxLevelPoints}</div>
                         <button id="show-full-creators-list-button">Полный список креаторов</button>
                     </div>
                 </div>`
