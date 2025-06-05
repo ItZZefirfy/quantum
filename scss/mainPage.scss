@@ -1,7 +1,10 @@
 @use 'other/functions.scss';
 
+body {
+    overflow-x: hidden;
+}
+
 #black-background {
-    //background-color: var(--frame-color);
     backdrop-filter: brightness(5%) blur(2px);
     position: fixed;
     top: 0;
