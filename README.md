@@ -1,4 +1,3 @@
-
 # Quantum GDPS
 
 - <a href="https://itzzefirfy.github.io/quantum/">Сайт</a>

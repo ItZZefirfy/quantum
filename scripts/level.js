@@ -1,5 +1,3 @@
-const { jsx } = require("react/jsx-runtime")
-
 function drawLevel(levelName, author, previewLink, videoLink, position, levelID) {
     let levelsWrapper = document.getElementById("levels-wrapper")
 

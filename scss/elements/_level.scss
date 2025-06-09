@@ -91,10 +91,9 @@
             right: 0;
 
             margin: var(--pxl2);
-            padding-top: var(--pxl-1);
+            padding: var(--pxl-1);
             
             background-color: var(--transparent-frame-color);
-            border-bottom: var(--pxl1);
             backdrop-filter: blur(var(--blur));
         }
     }
